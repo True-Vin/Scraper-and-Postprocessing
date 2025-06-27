@@ -1,0 +1,537 @@
+[
+    
+    
+    {
+        "timestamp": "2025-03-06 16:14:50",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42191737~US",
+        "stock_number": "42191737~US",
+        "Final_Bid": "If Bid for $850",
+        "Details": {
+            "Seller": "",
+            "Loss Type": "OTHER",
+            "Primary Damage": "Front end"
+        },
+        "VINDisplay": "<i class=\"za k ae\"></i><i class=\"zb f bi\"></i><i class=\"zc f cf\"></i><i class=\"zd j dc\"></i><i class=\"za b ae\"></i><i class=\"zb k bl\"></i><i class=\"zc a ch\"></i><i class=\"zd g dh\"></i><i class=\"za k al\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za l ah\"></i><i class=\"zb e bj\"></i><i class=\"zc f cl\"></i><i class=\"zd a dj\"></i><i class=\"za i ah\"></i><i class=\"zb e bc\"></i><i class=\"zc b cg\"></i><i class=\"zd g db\"></i><i class=\"za a af\"></i><i class=\"zb b bd\"></i><i class=\"zc c ce\"></i><i class=\"zd g dc\"></i><i class=\"za d ae\"></i><i class=\"zb g bk\"></i><i class=\"zc c ck\"></i><i class=\"zd a df\"></i><i class=\"za j aj\"></i><i class=\"zb k bj\"></i><i class=\"zc l cb\"></i><i class=\"zd k df\"></i><i class=\"za h ac\"></i><i class=\"zb i be\"></i><i class=\"zc b cc\"></i><i class=\"zd c dj\"></i><i class=\"za j aj\"></i><i class=\"zb k bj\"></i><i class=\"zc k cf\"></i><i class=\"zd f dh\"></i><i class=\"za l ad\"></i><i class=\"zb d bg\"></i><i class=\"zc g cd\"></i><i class=\"zd j dk\"></i><i class=\"za a ac\"></i><i class=\"zb d bk\"></i><i class=\"zc c cg\"></i><i class=\"zd i dc\"></i><i class=\"za k ac\"></i><i class=\"zb h bc\"></i><i class=\"zc c ch\"></i><i class=\"zd d di\"></i><i class=\"za f af\"></i><i class=\"zb b bb\"></i><i class=\"zc k cj\"></i><i class=\"zd i dg\"></i><i class=\"za j ai\"></i><i class=\"zb k bb\"></i><i class=\"zc h cf\"></i><i class=\"zd i di\"></i><i class=\"za b ac\"></i><i class=\"zb b bb\"></i><i class=\"zc i cl\"></i><i class=\"zd a di\"></i><i class=\"za c aj\"></i><i class=\"zb d bi\"></i><i class=\"zc a cf\"></i><i class=\"zd a dh\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42191737~SID~B719~S0~I4~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    {
+        "timestamp": "2025-03-06 16:15:22",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41164956~US",
+        "stock_number": "41164956~US",
+        "Final_Bid": "If Bid for $2550",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Right Side",
+            "Secondary Damage": "Left Rear",
+            "ODO": "46439 mi (Not Actual)",
+            "Title/Sale Doc": "Certificate of Destruction (Florida)",
+            "ACV": "$207,361.70",
+            "Est. Repairs": "$207,361.00",
+            "Airbags": "Deployed",
+            "Keys": "Present",
+            "Start Code": "Run & Drive",
+            "Run & Drive": "yes",
+            "Stock Number": "<i class=\"za k ac\"></i><i class=\"zb e be\"></i><i class=\"zc c ch\"></i><i class=\"zd h de\"></i><i class=\"za f af\"></i><i class=\"zb f bk\"></i><i class=\"zc e cg\"></i><i class=\"zd i dg\"></i><i class=\"za i ae\"></i><i class=\"zb b ba\"></i><i class=\"zc d cc\"></i><i class=\"zd g da\"></i><i class=\"za l ag\"></i><i class=\"zb i bb\"></i><i class=\"zc c cb\"></i><i class=\"zd b dl\"></i><i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc c ce\"></i><i class=\"zd l da\"></i><i class=\"za i af\"></i><i class=\"zb l bl\"></i><i class=\"zc d cf\"></i><i class=\"zd h dh\"></i><i class=\"za e af\"></i><i class=\"zb c bc\"></i><i class=\"zc b ci\"></i><i class=\"zd e di\"></i><i class=\"za j ai\"></i><i class=\"zb e bi\"></i><i class=\"zc i ci\"></i><i class=\"zd i dl\"></i>",
+            "VIN": "<i class=\"za b ai\"></i><i class=\"zb h bk\"></i><i class=\"zc g ce\"></i><i class=\"zd d dk\"></i><i class=\"za b ah\"></i><i class=\"zb f bb\"></i><i class=\"zc g cl\"></i><i class=\"zd i dj\"></i><i class=\"za f al\"></i><i class=\"zb j bb\"></i><i class=\"zc d ci\"></i><i class=\"zd c dh\"></i><i class=\"za g ai\"></i><i class=\"zb f bd\"></i><i class=\"zc b ch\"></i><i class=\"zd j di\"></i><i class=\"za j ac\"></i><i class=\"zb l ba\"></i><i class=\"zc b ck\"></i><i class=\"zd d dj\"></i><i class=\"za e aa\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za f ak\"></i><i class=\"zb h bk\"></i><i class=\"zc j cc\"></i><i class=\"zd g di\"></i><i class=\"za e ag\"></i><i class=\"zb g bg\"></i><i class=\"zc k cc\"></i><i class=\"zd a dk\"></i><i class=\"za g aa\"></i><i class=\"zb h be\"></i><i class=\"zc j cd\"></i><i class=\"zd e dh\"></i><i class=\"za g ak\"></i><i class=\"zb i bd\"></i><i class=\"zc b cj\"></i><i class=\"zd i dh\"></i><i class=\"za g ae\"></i><i class=\"zb i bg\"></i><i class=\"zc j cj\"></i><i class=\"zd a dk\"></i><i class=\"za j ac\"></i><i class=\"zb c bj\"></i><i class=\"zc b ck\"></i><i class=\"zd d df\"></i><i class=\"za e al\"></i><i class=\"zb j bc\"></i><i class=\"zc f ci\"></i><i class=\"zd e dk\"></i><i class=\"za c aj\"></i><i class=\"zb d be\"></i><i class=\"zc d cj\"></i><i class=\"zd a dh\"></i><i class=\"za j ae\"></i><i class=\"zb i bl\"></i><i class=\"zc i ce\"></i><i class=\"zd h db\"></i><i class=\"za e ai\"></i><i class=\"zb l bc\"></i><i class=\"zc b cd\"></i><i class=\"zd d dl\"></i><i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc c ce\"></i><i class=\"zd g dc\"></i>",
+            "Transmission": "Automatic",
+            "Cylinders": "8 Cyl",
+            "Fuel Type": "Gasoline",
+            "Engine": "4.0L V-8 DI, DOHC, VVT, turbo, 641HP",
+            "Drive Line Type": "All-Wheel Drive",
+            "Ext. Color": "Beige"
+        },
+        "VINDisplay": "<i class=\"za b ai\"></i><i class=\"zb h bk\"></i><i class=\"zc g ce\"></i><i class=\"zd d dk\"></i><i class=\"za b ah\"></i><i class=\"zb f bb\"></i><i class=\"zc g cl\"></i><i class=\"zd i dj\"></i><i class=\"za f al\"></i><i class=\"zb j bb\"></i><i class=\"zc d ci\"></i><i class=\"zd c dh\"></i><i class=\"za g ai\"></i><i class=\"zb f bd\"></i><i class=\"zc b ch\"></i><i class=\"zd j di\"></i><i class=\"za j ac\"></i><i class=\"zb l ba\"></i><i class=\"zc b ck\"></i><i class=\"zd d dj\"></i><i class=\"za e aa\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za f ak\"></i><i class=\"zb h bk\"></i><i class=\"zc j cc\"></i><i class=\"zd g di\"></i><i class=\"za e ag\"></i><i class=\"zb g bg\"></i><i class=\"zc k cc\"></i><i class=\"zd a dk\"></i><i class=\"za g aa\"></i><i class=\"zb h be\"></i><i class=\"zc j cd\"></i><i class=\"zd e dh\"></i><i class=\"za g ak\"></i><i class=\"zb i bd\"></i><i class=\"zc b cj\"></i><i class=\"zd i dh\"></i><i class=\"za g ae\"></i><i class=\"zb i bg\"></i><i class=\"zc j cj\"></i><i class=\"zd a dk\"></i><i class=\"za j ac\"></i><i class=\"zb c bj\"></i><i class=\"zc b ck\"></i><i class=\"zd d df\"></i><i class=\"za e al\"></i><i class=\"zb j bc\"></i><i class=\"zc f ci\"></i><i class=\"zd e dk\"></i><i class=\"za c aj\"></i><i class=\"zb d be\"></i><i class=\"zc d cj\"></i><i class=\"zd a dh\"></i><i class=\"za j ae\"></i><i class=\"zb i bl\"></i><i class=\"zc i ce\"></i><i class=\"zd h db\"></i><i class=\"za e ai\"></i><i class=\"zb l bc\"></i><i class=\"zc b cd\"></i><i class=\"zd d dl\"></i><i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc c ce\"></i><i class=\"zd g dc\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41164956~SID~B736~S0~I4~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41164956~SID~B736~S0~I5~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:15:54",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42020444~US",
+        "stock_number": "42020444~US",
+        "Final_Bid": "If Bid for $2,575",
+        "Details": {
+            "Seller": "State Farm Group Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION"
+        },
+        "VINDisplay": "<i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc c ce\"></i><i class=\"zd l da\"></i><i class=\"za a ag\"></i><i class=\"zb l bi\"></i><i class=\"zc i cb\"></i><i class=\"zd b df\"></i><i class=\"za i ag\"></i><i class=\"zb c bl\"></i><i class=\"zc a cb\"></i><i class=\"zd h dd\"></i><i class=\"za d ae\"></i><i class=\"zb i bk\"></i><i class=\"zc a cd\"></i><i class=\"zd d dh\"></i><i class=\"za j ag\"></i><i class=\"zb e bh\"></i><i class=\"zc h cl\"></i><i class=\"zd j de\"></i><i class=\"za e aa\"></i><i class=\"zb j bc\"></i><i class=\"zc g cc\"></i><i class=\"zd a dd\"></i><i class=\"za h ag\"></i><i class=\"zb k bj\"></i><i class=\"zc l cf\"></i><i class=\"zd f dh\"></i><i class=\"za c ac\"></i><i class=\"zb l bf\"></i><i class=\"zc b cj\"></i><i class=\"zd c di\"></i><i class=\"za l ad\"></i><i class=\"zb d bf\"></i><i class=\"zc g cd\"></i><i class=\"zd j dk\"></i><i class=\"za h ah\"></i><i class=\"zb b bl\"></i><i class=\"zc i cf\"></i><i class=\"zd h dk\"></i><i class=\"za f ac\"></i><i class=\"zb b bj\"></i><i class=\"zc b cg\"></i><i class=\"zd j dg\"></i><i class=\"za l ah\"></i><i class=\"zb h bj\"></i><i class=\"zc f cd\"></i><i class=\"zd a dj\"></i><i class=\"za h ai\"></i><i class=\"zb h bd\"></i><i class=\"zc i ce\"></i><i class=\"zd k dl\"></i><i class=\"za i af\"></i><i class=\"zb b ba\"></i><i class=\"zc d cf\"></i><i class=\"zd h dh\"></i><i class=\"za a ac\"></i><i class=\"zb l bk\"></i><i class=\"zc j cd\"></i><i class=\"zd i dc\"></i><i class=\"za a aa\"></i><i class=\"zb j bg\"></i><i class=\"zc c cg\"></i><i class=\"zd e dh\"></i><i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc h cc\"></i><i class=\"zd g dc\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42020444~SID~B653~S0~I3~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:16:06",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41846122~US",
+        "stock_number": "41846122~US",
+        "Final_Bid": "If Bid for $6,850",
+        "Details": {
+            "Seller": "State Farm Group Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Front & Rear",
+            "ODO": "19579 mi (Actual)"
+        },
+        "VINDisplay": "<i class=\"za j aa\"></i><i class=\"zb d bd\"></i><i class=\"zc a cb\"></i><i class=\"zd d dd\"></i><i class=\"za c ah\"></i><i class=\"zb a bk\"></i><i class=\"zc d cd\"></i><i class=\"zd f dk\"></i><i class=\"za a ac\"></i><i class=\"zb l bk\"></i><i class=\"zc j cd\"></i><i class=\"zd i dc\"></i><i class=\"za e ae\"></i><i class=\"zb a bc\"></i><i class=\"zc b ce\"></i><i class=\"zd f dc\"></i><i class=\"za a ah\"></i><i class=\"zb i bf\"></i><i class=\"zc l cg\"></i><i class=\"zd h dj\"></i><i class=\"za b aa\"></i><i class=\"zb j bk\"></i><i class=\"zc a cc\"></i><i class=\"zd l dg\"></i><i class=\"za h ac\"></i><i class=\"zb i be\"></i><i class=\"zc d cb\"></i><i class=\"zd a db\"></i><i class=\"za e ab\"></i><i class=\"zb l bi\"></i><i class=\"zc e ca\"></i><i class=\"zd g dj\"></i><i class=\"za h ai\"></i><i class=\"zb i bl\"></i><i class=\"zc i ce\"></i><i class=\"zd d db\"></i><i class=\"za f ai\"></i><i class=\"zb i bd\"></i><i class=\"zc k cb\"></i><i class=\"zd f dg\"></i><i class=\"za h al\"></i><i class=\"zb b bb\"></i><i class=\"zc k cj\"></i><i class=\"zd e db\"></i><i class=\"za i ae\"></i><i class=\"zb l bc\"></i><i class=\"zc d cc\"></i><i class=\"zd g da\"></i><i class=\"za g al\"></i><i class=\"zb h be\"></i><i class=\"zc c cg\"></i><i class=\"zd f dd\"></i><i class=\"za j ae\"></i><i class=\"zb h bh\"></i><i class=\"zc i ce\"></i><i class=\"zd l de\"></i><i class=\"za j ae\"></i><i class=\"zb h bh\"></i><i class=\"zc l ca\"></i><i class=\"zd d db\"></i><i class=\"za i af\"></i><i class=\"zb l bc\"></i><i class=\"zc d cf\"></i><i class=\"zd h dh\"></i><i class=\"za l ad\"></i><i class=\"zb d bg\"></i><i class=\"zc j cl\"></i><i class=\"zd f df\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41846122~SID~B719~S0~I2~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    {
+        "timestamp": "2025-03-06 16:16:14",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41824485~US",
+        "stock_number": "41824485~US",
+        "Final_Bid": "Sold for $1,250",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Front end",
+            "Secondary Damage": "Unknown",
+            "ODO": "17821 mi (Actual)",
+            "Title/Sale Doc": "Salvage (North Carolina)",
+            "ACV": "$26,338.70",
+            "Est. Repairs": "$26,338.00",
+            "Airbags": "Deployed",
+            "Keys": "Present",
+            "Start Code": "Stationary",
+            "Run & Drive": "no",
+            "Stock Number": "<i class=\"za k ac\"></i><i class=\"zb h bb\"></i><i class=\"zc a ci\"></i><i class=\"zd h de\"></i><i class=\"za k ae\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd a dd\"></i><i class=\"za c af\"></i><i class=\"zb h bb\"></i><i class=\"zc a ci\"></i><i class=\"zd k dd\"></i><i class=\"za b ac\"></i><i class=\"zb b bb\"></i><i class=\"zc k cj\"></i><i class=\"zd e db\"></i><i class=\"za h al\"></i><i class=\"zb j bd\"></i><i class=\"zc i cl\"></i><i class=\"zd a di\"></i><i class=\"za e al\"></i><i class=\"zb k bd\"></i><i class=\"zc f ci\"></i><i class=\"zd j dc\"></i><i class=\"za k ae\"></i><i class=\"zb j bc\"></i><i class=\"zc f ci\"></i><i class=\"zd a dd\"></i><i class=\"za g aa\"></i><i class=\"zb d bk\"></i><i class=\"zc j cd\"></i><i class=\"zd e dh\"></i>",
+            "VIN": "<i class=\"za k ac\"></i><i class=\"zb h bb\"></i><i class=\"zc d ch\"></i><i class=\"zd h df\"></i><i class=\"za d ak\"></i><i class=\"zb a bg\"></i><i class=\"zc j cg\"></i><i class=\"zd g dk\"></i><i class=\"za e aa\"></i><i class=\"zb j bc\"></i><i class=\"zc c ci\"></i><i class=\"zd e dk\"></i><i class=\"za b ae\"></i><i class=\"zb h bi\"></i><i class=\"zc h ci\"></i><i class=\"zd k de\"></i><i class=\"za e aa\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd a dd\"></i><i class=\"za k ae\"></i><i class=\"zb f bi\"></i><i class=\"zc f cf\"></i><i class=\"zd e dk\"></i><i class=\"za b ad\"></i><i class=\"zb e bh\"></i><i class=\"zc b ck\"></i><i class=\"zd d dj\"></i><i class=\"za e ac\"></i><i class=\"zb e ba\"></i><i class=\"zc l ch\"></i><i class=\"zd i da\"></i><i class=\"za h al\"></i><i class=\"zb f bk\"></i><i class=\"zc i cl\"></i><i class=\"zd a di\"></i><i class=\"za l ab\"></i><i class=\"zb j bj\"></i><i class=\"zc e ck\"></i><i class=\"zd d de\"></i><i class=\"za g ag\"></i><i class=\"zb e bg\"></i><i class=\"zc h cg\"></i><i class=\"zd b dg\"></i><i class=\"za j ai\"></i><i class=\"zb k bb\"></i><i class=\"zc b cf\"></i><i class=\"zd g dd\"></i><i class=\"za k ae\"></i><i class=\"zb f bi\"></i><i class=\"zc f ci\"></i><i class=\"zd a dd\"></i><i class=\"za e al\"></i><i class=\"zb f bi\"></i><i class=\"zc f ci\"></i><i class=\"zd a dd\"></i><i class=\"za g aa\"></i><i class=\"zb j bg\"></i><i class=\"zc j cd\"></i><i class=\"zd i dc\"></i><i class=\"za a ac\"></i><i class=\"zb d bk\"></i><i class=\"zc j cd\"></i><i class=\"zd e dh\"></i><i class=\"za e af\"></i><i class=\"zb c bi\"></i><i class=\"zc h cc\"></i><i class=\"zd e di\"></i>",
+            "Transmission": "Automatic",
+            "Cylinders": "4 Cyl",
+            "Fuel Type": "Gasoline"
+        },
+        "VINDisplay": "<i class=\"za e aa\"></i><i class=\"zb f bi\"></i><i class=\"zc f cf\"></i><i class=\"zd e dk\"></i><i class=\"za d aa\"></i><i class=\"zb a bh\"></i><i class=\"zc f ce\"></i><i class=\"zd h dc\"></i><i class=\"za b ae\"></i><i class=\"zb h bi\"></i><i class=\"zc e cl\"></i><i class=\"zd f de\"></i><i class=\"za i ak\"></i><i class=\"zb l be\"></i><i class=\"zc l cb\"></i><i class=\"zd d da\"></i><i class=\"za a ab\"></i><i class=\"zb f ba\"></i><i class=\"zc e ck\"></i><i class=\"zd c de\"></i><i class=\"za h ai\"></i><i class=\"zb i bl\"></i><i class=\"zc i ce\"></i><i class=\"zd l de\"></i><i class=\"za a ah\"></i><i class=\"zb i bf\"></i><i class=\"zc g ck\"></i><i class=\"zd j dg\"></i><i class=\"za k ak\"></i><i class=\"zb d bi\"></i><i class=\"zc h ck\"></i><i class=\"zd l di\"></i><i class=\"za c af\"></i><i class=\"zb e be\"></i><i class=\"zc c cc\"></i><i class=\"zd h df\"></i><i class=\"za j al\"></i><i class=\"zb i bi\"></i><i class=\"zc c cj\"></i><i class=\"zd j db\"></i><i class=\"za j ac\"></i><i class=\"zb j be\"></i><i class=\"zc a ck\"></i><i class=\"zd j de\"></i><i class=\"za i ac\"></i><i class=\"zb h bd\"></i><i class=\"zc i ce\"></i><i class=\"zd l de\"></i><i class=\"za k ah\"></i><i class=\"zb g ba\"></i><i class=\"zc a cf\"></i><i class=\"zd a dl\"></i><i class=\"za c ae\"></i><i class=\"zb d be\"></i><i class=\"zc a cf\"></i><i class=\"zd l di\"></i><i class=\"za j af\"></i><i class=\"zb k bi\"></i><i class=\"zc c ch\"></i><i class=\"zd k dd\"></i><i class=\"za f af\"></i><i class=\"zb f bk\"></i><i class=\"zc k ca\"></i><i class=\"zd a de\"></i><i class=\"za j ai\"></i><i class=\"zb k bb\"></i><i class=\"zc b cf\"></i><i class=\"zd i di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41824485~SID~B790~S0~I1~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41824485~SID~B790~S0~I2~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+   
+    {
+        "timestamp": "2025-03-06 16:16:18",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41701018~US",
+        "stock_number": "41701018~US",
+        "Final_Bid": "If Bid for $400",
+        "Details": {
+            "Seller": "TitleMax"
+        },
+        "VINDisplay": "<i class=\"za k ae\"></i><i class=\"zb j bc\"></i><i class=\"zc f cf\"></i><i class=\"zd j dj\"></i><i class=\"za j ak\"></i><i class=\"zb k bj\"></i><i class=\"zc l cb\"></i><i class=\"zd d dc\"></i><i class=\"za a aa\"></i><i class=\"zb l bk\"></i><i class=\"zc j ci\"></i><i class=\"zd f dd\"></i><i class=\"za j aj\"></i><i class=\"zb j bi\"></i><i class=\"zc l cb\"></i><i class=\"zd d da\"></i><i class=\"za i ak\"></i><i class=\"zb c bk\"></i><i class=\"zc f ca\"></i><i class=\"zd d da\"></i><i class=\"za j aj\"></i><i class=\"zb k bj\"></i><i class=\"zc f ca\"></i><i class=\"zd d da\"></i><i class=\"za d af\"></i><i class=\"zb c bj\"></i><i class=\"zc e cd\"></i><i class=\"zd d dj\"></i><i class=\"za l al\"></i><i class=\"zb l bg\"></i><i class=\"zc k cg\"></i><i class=\"zd h da\"></i><i class=\"za e ai\"></i><i class=\"zb b ba\"></i><i class=\"zc c ca\"></i><i class=\"zd g da\"></i><i class=\"za l aj\"></i><i class=\"zb k bl\"></i><i class=\"zc e cl\"></i><i class=\"zd k de\"></i><i class=\"za f aa\"></i><i class=\"zb i bd\"></i><i class=\"zc d cl\"></i><i class=\"zd i dh\"></i><i class=\"za e al\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc k ca\"></i><i class=\"zd i dg\"></i><i class=\"za g al\"></i><i class=\"zb j bg\"></i><i class=\"zc j cd\"></i><i class=\"zd e dh\"></i><i class=\"za k ai\"></i><i class=\"zb b ba\"></i><i class=\"zc c ca\"></i><i class=\"zd g dg\"></i><i class=\"za c ae\"></i><i class=\"zb g ba\"></i><i class=\"zc h ck\"></i><i class=\"zd k di\"></i><i class=\"za i ab\"></i><i class=\"zb i bb\"></i><i class=\"zc g ca\"></i><i class=\"zd j dk\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41701018~SID~B438~S1~I2~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41701018~SID~B438~S1~I3~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+   
+    {
+        "timestamp": "2025-03-06 16:16:20",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42210379~US",
+        "stock_number": "42210379~US",
+        "Final_Bid": "If Bid for $1,675",
+        "Details": {
+            "Seller": "",
+            "Loss Type": "OTHER",
+            "Primary Damage": "Front end",
+            "Secondary Damage": "Unknown",
+            "ODO": "149378 mi (Not Actual)",
+            "Title/Sale Doc": "Clear (Florida)",
+            "ACV": "$3,125.00",
+            "Airbags": "Intact",
+            "Keys": "Present",
+            "Start Code": "Run & Drive",
+            "Run & Drive": "yes",
+            "Stock Number": "<i class=\"za k ac\"></i><i class=\"zb k bi\"></i><i class=\"zc d ch\"></i><i class=\"zd d di\"></i><i class=\"za k al\"></i><i class=\"zb k bd\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za l ad\"></i><i class=\"zb d bf\"></i><i class=\"zc c cb\"></i><i class=\"zd b dl\"></i><i class=\"za e al\"></i><i class=\"zb d bc\"></i><i class=\"zc f cf\"></i><i class=\"zd j dj\"></i><i class=\"za j ai\"></i><i class=\"zb e bi\"></i><i class=\"zc a cg\"></i><i class=\"zd b dd\"></i><i class=\"za k ac\"></i><i class=\"zb e be\"></i><i class=\"zc c cc\"></i><i class=\"zd d di\"></i><i class=\"za e af\"></i><i class=\"zb c bc\"></i><i class=\"zc j ck\"></i><i class=\"zd g dc\"></i><i class=\"za c ae\"></i><i class=\"zb d bi\"></i><i class=\"zc h ck\"></i><i class=\"zd k di\"></i>",
+            "VIN": "<i class=\"za c ai\"></i><i class=\"zb a ba\"></i><i class=\"zc l ce\"></i><i class=\"zd a dg\"></i><i class=\"za d ab\"></i><i class=\"zb e bb\"></i><i class=\"zc a cl\"></i><i class=\"zd l df\"></i><i class=\"za c ai\"></i><i class=\"zb c ba\"></i><i class=\"zc l ce\"></i><i class=\"zd j dd\"></i><i class=\"za g ad\"></i><i class=\"zb i bj\"></i><i class=\"zc g cf\"></i><i class=\"zd a da\"></i><i class=\"za j aj\"></i><i class=\"zb c bk\"></i><i class=\"zc f ca\"></i><i class=\"zd k df\"></i><i class=\"za a aa\"></i><i class=\"zb d bk\"></i><i class=\"zc j cd\"></i><i class=\"zd i dc\"></i><i class=\"za h ag\"></i><i class=\"zb l be\"></i><i class=\"zc l cf\"></i><i class=\"zd f dh\"></i><i class=\"za b af\"></i><i class=\"zb b bd\"></i><i class=\"zc j ck\"></i><i class=\"zd g dc\"></i><i class=\"za c af\"></i><i class=\"zb h bc\"></i><i class=\"zc c cc\"></i><i class=\"zd d di\"></i><i class=\"za l ae\"></i><i class=\"zb k bh\"></i><i class=\"zc k ck\"></i><i class=\"zd l dl\"></i><i class=\"za c al\"></i><i class=\"zb a ba\"></i><i class=\"zc l ce\"></i><i class=\"zd a dg\"></i><i class=\"za d ak\"></i><i class=\"zb a bg\"></i><i class=\"zc i cj\"></i><i class=\"zd j dh\"></i><i class=\"za f af\"></i><i class=\"zb j bd\"></i><i class=\"zc k cj\"></i><i class=\"zd i dg\"></i><i class=\"za b ac\"></i><i class=\"zb j bl\"></i><i class=\"zc i cl\"></i><i class=\"zd a di\"></i><i class=\"za c aj\"></i><i class=\"zb d bi\"></i><i class=\"zc d cj\"></i><i class=\"zd k di\"></i><i class=\"za k ai\"></i><i class=\"zb e bd\"></i><i class=\"zc b cd\"></i><i class=\"zd g da\"></i><i class=\"za e al\"></i><i class=\"zb d bc\"></i><i class=\"zc f ci\"></i><i class=\"zd a dd\"></i>",
+            "Transmission": "Automatic",
+            "Cylinders": "4 Cyl",
+            "Fuel Type": "Gasoline",
+            "Engine": "1.6L I-4 DI, DOHC, VVT, turbo, 181HP",
+            "Drive Line Type": "Front Wheel Drive",
+            "Ext. Color": "Brown"
+        },
+        "VINDisplay": "<i class=\"za c ai\"></i><i class=\"zb a ba\"></i><i class=\"zc l ce\"></i><i class=\"zd a dg\"></i><i class=\"za d ab\"></i><i class=\"zb e bb\"></i><i class=\"zc a cl\"></i><i class=\"zd l df\"></i><i class=\"za c ai\"></i><i class=\"zb c ba\"></i><i class=\"zc l ce\"></i><i class=\"zd j dd\"></i><i class=\"za g ad\"></i><i class=\"zb i bj\"></i><i class=\"zc g cf\"></i><i class=\"zd a da\"></i><i class=\"za j aj\"></i><i class=\"zb c bk\"></i><i class=\"zc f ca\"></i><i class=\"zd k df\"></i><i class=\"za a aa\"></i><i class=\"zb d bk\"></i><i class=\"zc j cd\"></i><i class=\"zd i dc\"></i><i class=\"za h ag\"></i><i class=\"zb l be\"></i><i class=\"zc l cf\"></i><i class=\"zd f dh\"></i><i class=\"za b af\"></i><i class=\"zb b bd\"></i><i class=\"zc j ck\"></i><i class=\"zd g dc\"></i><i class=\"za c af\"></i><i class=\"zb h bc\"></i><i class=\"zc c cc\"></i><i class=\"zd d di\"></i><i class=\"za l ae\"></i><i class=\"zb k bh\"></i><i class=\"zc k ck\"></i><i class=\"zd l dl\"></i><i class=\"za c al\"></i><i class=\"zb a ba\"></i><i class=\"zc l ce\"></i><i class=\"zd a dg\"></i><i class=\"za d ak\"></i><i class=\"zb a bg\"></i><i class=\"zc i cj\"></i><i class=\"zd j dh\"></i><i class=\"za f af\"></i><i class=\"zb j bd\"></i><i class=\"zc k cj\"></i><i class=\"zd i dg\"></i><i class=\"za b ac\"></i><i class=\"zb j bl\"></i><i class=\"zc i cl\"></i><i class=\"zd a di\"></i><i class=\"za c aj\"></i><i class=\"zb d bi\"></i><i class=\"zc d cj\"></i><i class=\"zd k di\"></i><i class=\"za k ai\"></i><i class=\"zb e bd\"></i><i class=\"zc b cd\"></i><i class=\"zd g da\"></i><i class=\"za e al\"></i><i class=\"zb d bc\"></i><i class=\"zc f ci\"></i><i class=\"zd a dd\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42210379~SID~B736~S0~I3~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+   
+    {
+        "timestamp": "2025-03-06 16:17:16",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42045060~US",
+        "stock_number": "42045060~US",
+        "Final_Bid": "Sold for $5,150",
+        "Details": {},
+        "VINDisplay": "<i class=\"za a aa\"></i><i class=\"zb l bk\"></i><i class=\"zc j ci\"></i><i class=\"zd b dk\"></i><i class=\"za a ai\"></i><i class=\"zb k bg\"></i><i class=\"zc e ce\"></i><i class=\"zd c dl\"></i><i class=\"za c ad\"></i><i class=\"zb i ba\"></i><i class=\"zc l ce\"></i><i class=\"zd a dg\"></i><i class=\"za d ah\"></i><i class=\"zb e be\"></i><i class=\"zc c cc\"></i><i class=\"zd k dd\"></i><i class=\"za j af\"></i><i class=\"zb e be\"></i><i class=\"zc c ch\"></i><i class=\"zd k dd\"></i><i class=\"za l ad\"></i><i class=\"zb i bb\"></i><i class=\"zc g cd\"></i><i class=\"zd f df\"></i><i class=\"za d af\"></i><i class=\"zb c bj\"></i><i class=\"zc a ck\"></i><i class=\"zd d dj\"></i><i class=\"za g aj\"></i><i class=\"zb f bd\"></i><i class=\"zc b ch\"></i><i class=\"zd c df\"></i><i class=\"za l ad\"></i><i class=\"zb d bg\"></i><i class=\"zc c cb\"></i><i class=\"zd i db\"></i><i class=\"za e ak\"></i><i class=\"zb j ba\"></i><i class=\"zc f ce\"></i><i class=\"zd e dd\"></i><i class=\"za e aj\"></i><i class=\"zb a bk\"></i><i class=\"zc a cl\"></i><i class=\"zd e dj\"></i><i class=\"za f aj\"></i><i class=\"zb j bd\"></i><i class=\"zc e cg\"></i><i class=\"zd a di\"></i><i class=\"za e aa\"></i><i class=\"zb f bi\"></i><i class=\"zc f ci\"></i><i class=\"zd j dj\"></i><i class=\"za g aa\"></i><i class=\"zb h be\"></i><i class=\"zc c cg\"></i><i class=\"zd f dd\"></i><i class=\"za l ad\"></i><i class=\"zb i bb\"></i><i class=\"zc c cb\"></i><i class=\"zd i db\"></i><i class=\"za l aa\"></i><i class=\"zb k bb\"></i><i class=\"zc b cf\"></i><i class=\"zd g dd\"></i><i class=\"za j ai\"></i><i class=\"zb d ba\"></i><i class=\"zc h cf\"></i><i class=\"zd i di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42045060~SID~B719~S0~I3~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=42045060~SID~B719~S0~I4~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    {
+        "timestamp": "2025-03-06 16:17:23",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41805585~US",
+        "stock_number": "41805585~US",
+        "Final_Bid": "If Bid for $3,750",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Right Front",
+            "Secondary Damage": "Front end",
+            "ODO": "40383 mi (Actual)",
+            "Title/Sale Doc": "Salvage (North Carolina)",
+            "ACV": "$20,816.46",
+            "Est. Repairs": "$20,816.00"
+        },
+        "VINDisplay": "<i class=\"za a ae\"></i><i class=\"zb c bl\"></i><i class=\"zc i cg\"></i><i class=\"zd d dd\"></i><i class=\"za f ac\"></i><i class=\"zb b bj\"></i><i class=\"zc l cg\"></i><i class=\"zd h dj\"></i><i class=\"za e aa\"></i><i class=\"zb j bc\"></i><i class=\"zc f ci\"></i><i class=\"zd j dc\"></i><i class=\"za c aa\"></i><i class=\"zb k bg\"></i><i class=\"zc e ce\"></i><i class=\"zd c dl\"></i><i class=\"za d af\"></i><i class=\"zb l ba\"></i><i class=\"zc a ck\"></i><i class=\"zd d df\"></i><i class=\"za j ae\"></i><i class=\"zb h bh\"></i><i class=\"zc i ce\"></i><i class=\"zd h db\"></i><i class=\"za c aa\"></i><i class=\"zb j bf\"></i><i class=\"zc j cf\"></i><i class=\"zd i dd\"></i><i class=\"za i af\"></i><i class=\"zb l bl\"></i><i class=\"zc b cd\"></i><i class=\"zd g da\"></i><i class=\"za a al\"></i><i class=\"zb i be\"></i><i class=\"zc g ci\"></i><i class=\"zd a db\"></i><i class=\"za k ab\"></i><i class=\"zb f bc\"></i><i class=\"zc e cc\"></i><i class=\"zd c dd\"></i><i class=\"za k aj\"></i><i class=\"zb c bf\"></i><i class=\"zc a cg\"></i><i class=\"zd i dl\"></i><i class=\"za c aj\"></i><i class=\"zb g ba\"></i><i class=\"zc g cj\"></i><i class=\"zd a dl\"></i><i class=\"za k al\"></i><i class=\"zb d bc\"></i><i class=\"zc g cc\"></i><i class=\"zd a dd\"></i><i class=\"za i ab\"></i><i class=\"zb d bg\"></i><i class=\"zc c cb\"></i><i class=\"zd f df\"></i><i class=\"za k aj\"></i><i class=\"zb c bf\"></i><i class=\"zc i ci\"></i><i class=\"zd i dl\"></i><i class=\"za h ai\"></i><i class=\"zb h bh\"></i><i class=\"zc i ce\"></i><i class=\"zd h db\"></i><i class=\"za g al\"></i><i class=\"zb d bk\"></i><i class=\"zc c cg\"></i><i class=\"zd f dd\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41805585~SID~B790~S1~I2~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+   
+    
+    
+    {
+        "timestamp": "2025-03-06 16:17:57",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42042596~US",
+        "stock_number": "42042596~US",
+        "Final_Bid": "If Bid for $1,300",
+        "Details": {
+            "Seller": "TitleMax",
+            "Loss Type": "OTHER",
+            "Primary Damage": "Engine Damage",
+            "Secondary Damage": "Left & Right Side",
+            "ODO": "183892 mi (Actual)",
+            "Title/Sale Doc": "Original (Texas)",
+            "Title/Sale Doc Note": "22130045563111930",
+            "ACV": "$1,300.00",
+            "Airbags": "None",
+            "Keys": "Present",
+            "Start Code": "Stationary",
+            "Run & Drive": "no",
+            "Stock Number": "<i class=\"za d ah\"></i><i class=\"zb e be\"></i><i class=\"zc d ch\"></i><i class=\"zd h df\"></i><i class=\"za k al\"></i><i class=\"zb f bi\"></i><i class=\"zc f ci\"></i><i class=\"zd a dd\"></i><i class=\"za b af\"></i><i class=\"zb c bc\"></i><i class=\"zc b ci\"></i><i class=\"zd c dg\"></i><i class=\"za d aj\"></i><i class=\"zb k bf\"></i><i class=\"zc b ci\"></i><i class=\"zd c dg\"></i><i class=\"za e al\"></i><i class=\"zb d bc\"></i><i class=\"zc f ci\"></i><i class=\"zd j dc\"></i><i class=\"za k ak\"></i><i class=\"zb g ba\"></i><i class=\"zc g cj\"></i><i class=\"zd k di\"></i><i class=\"za i ab\"></i><i class=\"zb d bf\"></i><i class=\"zc g cd\"></i><i class=\"zd i db\"></i><i class=\"za e aa\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i>",
+            "VIN": "<i class=\"za k al\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za b ae\"></i><i class=\"zb h bi\"></i><i class=\"zc a ch\"></i><i class=\"zd g dh\"></i><i class=\"za i ai\"></i><i class=\"zb g bc\"></i><i class=\"zc e cj\"></i><i class=\"zd k db\"></i><i class=\"za h ah\"></i><i class=\"zb b bl\"></i><i class=\"zc i cf\"></i><i class=\"zd k dk\"></i><i class=\"za c ak\"></i><i class=\"zb a bf\"></i><i class=\"zc b ce\"></i><i class=\"zd h dl\"></i><i class=\"za e al\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za c af\"></i><i class=\"zb h bc\"></i><i class=\"zc c ch\"></i><i class=\"zd d di\"></i><i class=\"za e ac\"></i><i class=\"zb e ba\"></i><i class=\"zc f cj\"></i><i class=\"zd f dc\"></i><i class=\"za k ac\"></i><i class=\"zb h bc\"></i><i class=\"zc d ch\"></i><i class=\"zd d di\"></i><i class=\"za f ah\"></i><i class=\"zb g bh\"></i><i class=\"zc f ch\"></i><i class=\"zd b de\"></i><i class=\"za j al\"></i><i class=\"zb k bh\"></i><i class=\"zc b cl\"></i><i class=\"zd j db\"></i><i class=\"za a af\"></i><i class=\"zb k bf\"></i><i class=\"zc c ce\"></i><i class=\"zd e di\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc k ca\"></i><i class=\"zd a di\"></i><i class=\"za a ac\"></i><i class=\"zb h be\"></i><i class=\"zc j ci\"></i><i class=\"zd e dh\"></i><i class=\"za l ag\"></i><i class=\"zb d bg\"></i><i class=\"zc c cb\"></i><i class=\"zd i db\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc k cj\"></i><i class=\"zd a de\"></i><i class=\"za k aj\"></i><i class=\"zb k bb\"></i><i class=\"zc a cg\"></i><i class=\"zd i dl\"></i>",
+            "Transmission": "Automatic",
+            "Cylinders": "8 Cyl",
+            "Fuel Type": "Gasoline",
+            "Engine": "5.7L V8 FI F",
+            "Drive Line Type": "Four Wheel Drive",
+            "Ext. Color": "Tan"
+        },
+        "VINDisplay": "<i class=\"za k al\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za b ae\"></i><i class=\"zb h bi\"></i><i class=\"zc a ch\"></i><i class=\"zd g dh\"></i><i class=\"za i ai\"></i><i class=\"zb g bc\"></i><i class=\"zc e cj\"></i><i class=\"zd k db\"></i><i class=\"za h ah\"></i><i class=\"zb b bl\"></i><i class=\"zc i cf\"></i><i class=\"zd k dk\"></i><i class=\"za c ak\"></i><i class=\"zb a bf\"></i><i class=\"zc b ce\"></i><i class=\"zd h dl\"></i><i class=\"za e al\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za c af\"></i><i class=\"zb h bc\"></i><i class=\"zc c ch\"></i><i class=\"zd d di\"></i><i class=\"za e ac\"></i><i class=\"zb e ba\"></i><i class=\"zc f cj\"></i><i class=\"zd f dc\"></i><i class=\"za k ac\"></i><i class=\"zb h bc\"></i><i class=\"zc d ch\"></i><i class=\"zd d di\"></i><i class=\"za f ah\"></i><i class=\"zb g bh\"></i><i class=\"zc f ch\"></i><i class=\"zd b de\"></i><i class=\"za j al\"></i><i class=\"zb k bh\"></i><i class=\"zc b cl\"></i><i class=\"zd j db\"></i><i class=\"za a af\"></i><i class=\"zb k bf\"></i><i class=\"zc c ce\"></i><i class=\"zd e di\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc k ca\"></i><i class=\"zd a di\"></i><i class=\"za a ac\"></i><i class=\"zb h be\"></i><i class=\"zc j ci\"></i><i class=\"zd e dh\"></i><i class=\"za l ag\"></i><i class=\"zb d bg\"></i><i class=\"zc c cb\"></i><i class=\"zd i db\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc k cj\"></i><i class=\"zd a de\"></i><i class=\"za k aj\"></i><i class=\"zb k bb\"></i><i class=\"zc a cg\"></i><i class=\"zd i dl\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42042596~SID~B438~S1~I6~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    {
+        "timestamp": "2025-03-06 16:18:51",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/40458663~US",
+        "stock_number": "40458663~US",
+        "Final_Bid": "Sold for $1,375",
+        "Details": {
+            "Seller": "State Farm Group Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Right Front",
+            "ODO": "108424 mi (Actual)"
+        },
+        "VINDisplay": "<i class=\"za h ai\"></i><i class=\"zb h bd\"></i><i class=\"zc l ck\"></i><i class=\"zd k dl\"></i><i class=\"za b ae\"></i><i class=\"zb g bd\"></i><i class=\"zc k ch\"></i><i class=\"zd k de\"></i><i class=\"za c ac\"></i><i class=\"zb l bf\"></i><i class=\"zc d cl\"></i><i class=\"zd f dg\"></i><i class=\"za b ad\"></i><i class=\"zb l ba\"></i><i class=\"zc h cl\"></i><i class=\"zd d df\"></i><i class=\"za h ac\"></i><i class=\"zb i be\"></i><i class=\"zc d cb\"></i><i class=\"zd c dj\"></i><i class=\"za l ai\"></i><i class=\"zb f bd\"></i><i class=\"zc h cj\"></i><i class=\"zd c df\"></i><i class=\"za l ae\"></i><i class=\"zb k bh\"></i><i class=\"zc c cj\"></i><i class=\"zd k dh\"></i><i class=\"za a ai\"></i><i class=\"zb j bf\"></i><i class=\"zc l ci\"></i><i class=\"zd c dl\"></i><i class=\"za e al\"></i><i class=\"zb f bi\"></i><i class=\"zc f cf\"></i><i class=\"zd j dj\"></i><i class=\"za e ae\"></i><i class=\"zb e ba\"></i><i class=\"zc b ce\"></i><i class=\"zd h dl\"></i><i class=\"za k ai\"></i><i class=\"zb e bd\"></i><i class=\"zc d cc\"></i><i class=\"zd g dg\"></i><i class=\"za k al\"></i><i class=\"zb k bd\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za k ae\"></i><i class=\"zb f bi\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za k ai\"></i><i class=\"zb b ba\"></i><i class=\"zc d cc\"></i><i class=\"zd g da\"></i><i class=\"za b ac\"></i><i class=\"zb f bk\"></i><i class=\"zc k ca\"></i><i class=\"zd i dg\"></i><i class=\"za c af\"></i><i class=\"zb k bi\"></i><i class=\"zc a ci\"></i><i class=\"zd k dd\"></i><i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc b ci\"></i><i class=\"zd e di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=40458663~SID~B653~S0~I3~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=40458663~SID~B653~S0~I4~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:18:57",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42024244~US",
+        "stock_number": "42024244~US",
+        "Final_Bid": "Sold for $1,850",
+        "Details": {},
+        "VINDisplay": "<i class=\"za a ac\"></i><i class=\"zb d bk\"></i><i class=\"zc k ce\"></i><i class=\"zd e dh\"></i><i class=\"za l aj\"></i><i class=\"zb g bd\"></i><i class=\"zc a ch\"></i><i class=\"zd f de\"></i><i class=\"za g ak\"></i><i class=\"zb a bj\"></i><i class=\"zc b cj\"></i><i class=\"zd i dh\"></i><i class=\"za e ae\"></i><i class=\"zb e ba\"></i><i class=\"zc b ce\"></i><i class=\"zd i da\"></i><i class=\"za l al\"></i><i class=\"zb j bk\"></i><i class=\"zc k cg\"></i><i class=\"zd l dg\"></i><i class=\"za e ak\"></i><i class=\"zb a bh\"></i><i class=\"zc e cc\"></i><i class=\"zd l dh\"></i><i class=\"za l ab\"></i><i class=\"zb f ba\"></i><i class=\"zc k cl\"></i><i class=\"zd d de\"></i><i class=\"za c af\"></i><i class=\"zb h bb\"></i><i class=\"zc d ch\"></i><i class=\"zd h de\"></i><i class=\"za a af\"></i><i class=\"zb b bd\"></i><i class=\"zc j ck\"></i><i class=\"zd g dc\"></i><i class=\"za d al\"></i><i class=\"zb c bb\"></i><i class=\"zc k cc\"></i><i class=\"zd l db\"></i><i class=\"za c ag\"></i><i class=\"zb a bi\"></i><i class=\"zc j ce\"></i><i class=\"zd a df\"></i><i class=\"za i af\"></i><i class=\"zb l bc\"></i><i class=\"zc c ca\"></i><i class=\"zd g dg\"></i><i class=\"za k ai\"></i><i class=\"zb l bl\"></i><i class=\"zc c ca\"></i><i class=\"zd g da\"></i><i class=\"za e ai\"></i><i class=\"zb l bl\"></i><i class=\"zc c ca\"></i><i class=\"zd h dh\"></i><i class=\"za g aa\"></i><i class=\"zb h be\"></i><i class=\"zc j ci\"></i><i class=\"zd i dc\"></i><i class=\"za j ae\"></i><i class=\"zb h bh\"></i><i class=\"zc b cb\"></i><i class=\"zd l de\"></i><i class=\"za f ab\"></i><i class=\"zb k bb\"></i><i class=\"zc b cf\"></i><i class=\"zd i di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41918207~SID~B719~S0~I3~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41918207~SID~B719~S0~I4~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    {
+        "timestamp": "2025-03-06 16:19:01",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42075316~US",
+        "stock_number": "42075316~US",
+        "Final_Bid": "Sold for $675",
+        "Details": {
+            "Seller": "TitleMax",
+            "Loss Type": "OTHER",
+            "Primary Damage": "Front end",
+            "ODO": "186655 mi (Actual)",
+            "Title/Sale Doc": "Repossession Paperwork (Georgia)",
+            "ACV": "$1,900.00"
+        },
+        "VINDisplay": "<i class=\"za k ae\"></i><i class=\"zb f bi\"></i><i class=\"zc g cc\"></i><i class=\"zd e dk\"></i><i class=\"za g ak\"></i><i class=\"zb a bj\"></i><i class=\"zc d cl\"></i><i class=\"zd c di\"></i><i class=\"za i aj\"></i><i class=\"zb i be\"></i><i class=\"zc f cc\"></i><i class=\"zd l dd\"></i><i class=\"za b aa\"></i><i class=\"zb j bb\"></i><i class=\"zc a cc\"></i><i class=\"zd c dc\"></i><i class=\"za j ab\"></i><i class=\"zb f ba\"></i><i class=\"zc h ch\"></i><i class=\"zd c de\"></i><i class=\"za g al\"></i><i class=\"zb h be\"></i><i class=\"zc c cg\"></i><i class=\"zd f dd\"></i><i class=\"za l af\"></i><i class=\"zb g be\"></i><i class=\"zc l ca\"></i><i class=\"zd d db\"></i><i class=\"za l ae\"></i><i class=\"zb b be\"></i><i class=\"zc k ck\"></i><i class=\"zd j db\"></i><i class=\"za k ah\"></i><i class=\"zb d be\"></i><i class=\"zc g cj\"></i><i class=\"zd l di\"></i><i class=\"za c aj\"></i><i class=\"zb d be\"></i><i class=\"zc d cj\"></i><i class=\"zd a dl\"></i><i class=\"za f ak\"></i><i class=\"zb h bk\"></i><i class=\"zc j cc\"></i><i class=\"zd a da\"></i><i class=\"za f aj\"></i><i class=\"zb j bd\"></i><i class=\"zc e cg\"></i><i class=\"zd a di\"></i><i class=\"za j af\"></i><i class=\"zb k bi\"></i><i class=\"zc d ch\"></i><i class=\"zd k dd\"></i><i class=\"za e ai\"></i><i class=\"zb l bl\"></i><i class=\"zc b cd\"></i><i class=\"zd d dl\"></i><i class=\"za h ab\"></i><i class=\"zb d bf\"></i><i class=\"zc g cd\"></i><i class=\"zd j dk\"></i><i class=\"za c af\"></i><i class=\"zb h bb\"></i><i class=\"zc c ch\"></i><i class=\"zd h df\"></i><i class=\"za c ae\"></i><i class=\"zb d bb\"></i><i class=\"zc a cf\"></i><i class=\"zd k di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42075316~SID~B707~S0~I3~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=42075316~SID~B707~S0~I4~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:19:03",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42077188~US",
+        "stock_number": "42077188~US",
+        "Final_Bid": "Sold for $4,200",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "All Over",
+            "Secondary Damage": "Electrical",
+            "ODO": "1 mi (Inoperable Digital Dash)",
+            "Title/Sale Doc": "Rebuildable (Florida)",
+            "ACV": "$9,798.21",
+            "Est. Repairs": "$9,732.00"
+        },
+        "VINDisplay": "<i class=\"za d ah\"></i><i class=\"zb k bi\"></i><i class=\"zc a ci\"></i><i class=\"zd h df\"></i><i class=\"za a ae\"></i><i class=\"zb d bl\"></i><i class=\"zc h cb\"></i><i class=\"zd d dd\"></i><i class=\"za a ak\"></i><i class=\"zb g bd\"></i><i class=\"zc h ci\"></i><i class=\"zd f de\"></i><i class=\"za d ag\"></i><i class=\"zb g bi\"></i><i class=\"zc i cf\"></i><i class=\"zd l dj\"></i><i class=\"za j ac\"></i><i class=\"zb c bj\"></i><i class=\"zc a ck\"></i><i class=\"zd j da\"></i><i class=\"za d aj\"></i><i class=\"zb c bc\"></i><i class=\"zc h cc\"></i><i class=\"zd e di\"></i><i class=\"za e ak\"></i><i class=\"zb b bi\"></i><i class=\"zc e cc\"></i><i class=\"zd e dd\"></i><i class=\"za f al\"></i><i class=\"zb j bk\"></i><i class=\"zc a cc\"></i><i class=\"zd l dg\"></i><i class=\"za h ac\"></i><i class=\"zb j bh\"></i><i class=\"zc g ci\"></i><i class=\"zd a db\"></i><i class=\"za h ag\"></i><i class=\"zb c bk\"></i><i class=\"zc l cb\"></i><i class=\"zd d dc\"></i><i class=\"za j ac\"></i><i class=\"zb l ba\"></i><i class=\"zc a ck\"></i><i class=\"zd j de\"></i><i class=\"za h al\"></i><i class=\"zb f bk\"></i><i class=\"zc k ca\"></i><i class=\"zd e db\"></i><i class=\"za k ah\"></i><i class=\"zb d be\"></i><i class=\"zc d cj\"></i><i class=\"zd a dl\"></i><i class=\"za j ai\"></i><i class=\"zb e bi\"></i><i class=\"zc i ci\"></i><i class=\"zd g dd\"></i><i class=\"za i ab\"></i><i class=\"zb d bf\"></i><i class=\"zc g cd\"></i><i class=\"zd j dk\"></i><i class=\"za i ac\"></i><i class=\"zb h bd\"></i><i class=\"zc i ce\"></i><i class=\"zd k dl\"></i><i class=\"za f aj\"></i><i class=\"zb f bk\"></i><i class=\"zc k ca\"></i><i class=\"zd e db\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42077188~SID~B736~S0~I3~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=42077188~SID~B736~S0~I4~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:19:08",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41812369~US",
+        "stock_number": "41812369~US",
+        "Final_Bid": "If Bid for $100",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Front end",
+            "ODO": "35089 mi (Actual)",
+            "Title/Sale Doc": "Certificate of Destruction (Florida)",
+            "ACV": "$62,888.21",
+            "Est. Repairs": "$73,703.00",
+            "Airbags": "Intact",
+            "Keys": "Missing",
+            "Start Code": "Stationary",
+            "Run & Drive": "no",
+            "Stock Number": "<i class=\"za d ah\"></i><i class=\"zb h bc\"></i><i class=\"zc c ch\"></i><i class=\"zd h de\"></i><i class=\"za k al\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd e dk\"></i><i class=\"za k ac\"></i><i class=\"zb e be\"></i><i class=\"zc c ch\"></i><i class=\"zd d di\"></i><i class=\"za i ae\"></i><i class=\"zb e bd\"></i><i class=\"zc d cf\"></i><i class=\"zd h dh\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc i cl\"></i><i class=\"zd a di\"></i><i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc b ci\"></i><i class=\"zd g dc\"></i><i class=\"za a af\"></i><i class=\"zb c bc\"></i><i class=\"zc c ce\"></i><i class=\"zd l da\"></i><i class=\"za h ab\"></i><i class=\"zb d bf\"></i><i class=\"zc g cd\"></i><i class=\"zd f df\"></i>"
+        },
+        "VINDisplay": "<i class=\"za a af\"></i><i class=\"zb c bi\"></i><i class=\"zc b ci\"></i><i class=\"zd e di\"></i><i class=\"za c ac\"></i><i class=\"zb i bd\"></i><i class=\"zc k ci\"></i><i class=\"zd k dg\"></i><i class=\"za e aj\"></i><i class=\"zb d bh\"></i><i class=\"zc i ch\"></i><i class=\"zd e dj\"></i><i class=\"za a ae\"></i><i class=\"zb d bd\"></i><i class=\"zc i cg\"></i><i class=\"zd l dk\"></i><i class=\"za j ak\"></i><i class=\"zb c bk\"></i><i class=\"zc l cb\"></i><i class=\"zd d da\"></i><i class=\"za a ac\"></i><i class=\"zb j bg\"></i><i class=\"zc j ci\"></i><i class=\"zd b dk\"></i><i class=\"za b ab\"></i><i class=\"zb l bd\"></i><i class=\"zc j ca\"></i><i class=\"zd e da\"></i><i class=\"za l ae\"></i><i class=\"zb i bi\"></i><i class=\"zc b cl\"></i><i class=\"zd l dl\"></i><i class=\"za i ac\"></i><i class=\"zb h bh\"></i><i class=\"zc i ce\"></i><i class=\"zd d db\"></i><i class=\"za c ag\"></i><i class=\"zb k be\"></i><i class=\"zc c ck\"></i><i class=\"zd c da\"></i><i class=\"za k ab\"></i><i class=\"zb f bc\"></i><i class=\"zc e cc\"></i><i class=\"zd e dd\"></i><i class=\"za d ah\"></i><i class=\"zb k bi\"></i><i class=\"zc d ch\"></i><i class=\"zd h df\"></i><i class=\"za i ab\"></i><i class=\"zb d bg\"></i><i class=\"zc g ca\"></i><i class=\"zd i db\"></i><i class=\"za c af\"></i><i class=\"zb e be\"></i><i class=\"zc d ch\"></i><i class=\"zd k dd\"></i><i class=\"za j ai\"></i><i class=\"zb e bi\"></i><i class=\"zc a cg\"></i><i class=\"zd b dd\"></i><i class=\"za f af\"></i><i class=\"zb f bk\"></i><i class=\"zc k ca\"></i><i class=\"zd a de\"></i><i class=\"za f ab\"></i><i class=\"zb k bb\"></i><i class=\"zc i ci\"></i><i class=\"zd i dl\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41812369~SID~B736~S0~I1~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:19:14",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41817298~US",
+        "stock_number": "41817298~US",
+        "Final_Bid": "If Bid for $400",
+        "Details": {
+            "Seller": "",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Right Side",
+            "Secondary Damage": "Unknown",
+            "ODO": "184289 mi (Actual)",
+            "Title/Sale Doc": "Salvage (Ohio) Rebuilt Salvage",
+            "ACV": "$7,800.00",
+            "Airbags": "Deployed",
+            "Keys": "Present"
+        },
+        "VINDisplay": "<i class=\"za j ae\"></i><i class=\"zb i bl\"></i><i class=\"zc b cb\"></i><i class=\"zd h db\"></i><i class=\"za h aa\"></i><i class=\"zb f bc\"></i><i class=\"zc f cb\"></i><i class=\"zd c dd\"></i><i class=\"za a ak\"></i><i class=\"zb g bd\"></i><i class=\"zc e cl\"></i><i class=\"zd f de\"></i><i class=\"za i ah\"></i><i class=\"zb i bf\"></i><i class=\"zc l cg\"></i><i class=\"zd j dg\"></i><i class=\"za b aa\"></i><i class=\"zb j bk\"></i><i class=\"zc a cc\"></i><i class=\"zd c dc\"></i><i class=\"za l af\"></i><i class=\"zb i bl\"></i><i class=\"zc l ca\"></i><i class=\"zd d db\"></i><i class=\"za i al\"></i><i class=\"zb e bc\"></i><i class=\"zc g ck\"></i><i class=\"zd h dj\"></i><i class=\"za b af\"></i><i class=\"zb c bc\"></i><i class=\"zc b ci\"></i><i class=\"zd c dg\"></i><i class=\"za i ae\"></i><i class=\"zb l bl\"></i><i class=\"zc c ca\"></i><i class=\"zd g da\"></i><i class=\"za j aj\"></i><i class=\"zb l be\"></i><i class=\"zc k cf\"></i><i class=\"zd d dc\"></i><i class=\"za k ab\"></i><i class=\"zb j ba\"></i><i class=\"zc h ce\"></i><i class=\"zd c dd\"></i><i class=\"za d aj\"></i><i class=\"zb k bf\"></i><i class=\"zc c ce\"></i><i class=\"zd g dc\"></i><i class=\"za b af\"></i><i class=\"zb c bi\"></i><i class=\"zc c ce\"></i><i class=\"zd g dc\"></i><i class=\"za a ac\"></i><i class=\"zb h be\"></i><i class=\"zc j cd\"></i><i class=\"zd e dh\"></i><i class=\"za j af\"></i><i class=\"zb k bi\"></i><i class=\"zc d ch\"></i><i class=\"zd d di\"></i><i class=\"za k ah\"></i><i class=\"zb d bi\"></i><i class=\"zc g cj\"></i><i class=\"zd l di\"></i><i class=\"za i ac\"></i><i class=\"zb g be\"></i><i class=\"zc i ce\"></i><i class=\"zd h db\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41817298~SID~B653~S0~I1~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41817298~SID~B653~S0~I2~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+   
+    {
+        "timestamp": "2025-03-06 16:19:33",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41792468~US",
+        "stock_number": "41792468~US",
+        "Final_Bid": "If Bid for $7500",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Left Front",
+            "Secondary Damage": "Unknown",
+            "ODO": "130517 mi (Actual)",
+            "Title/Sale Doc": "Salvage (North Carolina) Rebuilt",
+            "ACV": "$20,664.79",
+            "Est. Repairs": "$7,796.00",
+            "Airbags": "Intact",
+            "Keys": "Present",
+            "Start Code": "Run & Drive",
+            "Run & Drive": "yes",
+            "Stock Number": "<i class=\"za j af\"></i><i class=\"zb k bi\"></i><i class=\"zc c cc\"></i><i class=\"zd h df\"></i><i class=\"za k al\"></i><i class=\"zb j bc\"></i><i class=\"zc f ci\"></i><i class=\"zd j dc\"></i><i class=\"za a aa\"></i><i class=\"zb l bk\"></i><i class=\"zc j cd\"></i><i class=\"zd b dk\"></i><i class=\"za f af\"></i><i class=\"zb j bd\"></i><i class=\"zc k ca\"></i><i class=\"zd a de\"></i><i class=\"za i ac\"></i><i class=\"zb g be\"></i><i class=\"zc i ce\"></i><i class=\"zd k dl\"></i><i class=\"za h al\"></i><i class=\"zb f bk\"></i><i class=\"zc i cl\"></i><i class=\"zd a de\"></i><i class=\"za k ah\"></i><i class=\"zb g ba\"></i><i class=\"zc d cj\"></i><i class=\"zd a dh\"></i><i class=\"za j af\"></i><i class=\"zb e be\"></i><i class=\"zc c cc\"></i><i class=\"zd d di\"></i>",
+            "VIN": "<i class=\"za b af\"></i><i class=\"zb c bi\"></i><i class=\"zc h cc\"></i><i class=\"zd g dc\"></i><i class=\"za i ai\"></i><i class=\"zb a bg\"></i><i class=\"zc j cg\"></i><i class=\"zd e df\"></i><i class=\"za d ag\"></i><i class=\"zb l bd\"></i><i class=\"zc j ca\"></i><i class=\"zd e da\"></i><i class=\"za b ai\"></i><i class=\"zb h bk\"></i><i class=\"zc j cc\"></i><i class=\"zd g dl\"></i><i class=\"za b ai\"></i><i class=\"zb a bl\"></i><i class=\"zc g cf\"></i><i class=\"zd d dk\"></i><i class=\"za a ab\"></i><i class=\"zb d bj\"></i><i class=\"zc e ck\"></i><i class=\"zd d de\"></i><i class=\"za i al\"></i><i class=\"zb e bc\"></i><i class=\"zc g ck\"></i><i class=\"zd j dg\"></i><i class=\"za d aa\"></i><i class=\"zb b bi\"></i><i class=\"zc h ce\"></i><i class=\"zd h dc\"></i><i class=\"za a al\"></i><i class=\"zb g bj\"></i><i class=\"zc b cc\"></i><i class=\"zd i df\"></i><i class=\"za e ae\"></i><i class=\"zb a bf\"></i><i class=\"zc e cb\"></i><i class=\"zd i da\"></i><i class=\"za d ae\"></i><i class=\"zb i bk\"></i><i class=\"zc h ca\"></i><i class=\"zd a df\"></i><i class=\"za a ac\"></i><i class=\"zb d bk\"></i><i class=\"zc k ce\"></i><i class=\"zd i dc\"></i><i class=\"za l af\"></i><i class=\"zb h bd\"></i><i class=\"zc l ck\"></i><i class=\"zd k dl\"></i><i class=\"za k ak\"></i><i class=\"zb g ba\"></i><i class=\"zc d cj\"></i><i class=\"zd a dl\"></i><i class=\"za b af\"></i><i class=\"zb c bi\"></i><i class=\"zc h cc\"></i><i class=\"zd g dc\"></i><i class=\"za i ab\"></i><i class=\"zb i bb\"></i><i class=\"zc g cd\"></i><i class=\"zd b dl\"></i><i class=\"za g al\"></i><i class=\"zb l bk\"></i><i class=\"zc k ce\"></i><i class=\"zd i dc\"></i>",
+            "Transmission": "Automatic",
+            "Cylinders": "6 Cyl",
+            "Fuel Type": "Gasoline",
+            "Engine": "3.5L V-6 DI, DOHC, VVT, 295HP",
+            "Drive Line Type": "Front Wheel Drive",
+            "Ext. Color": "Black"
+        },
+        "VINDisplay": "<i class=\"za b af\"></i><i class=\"zb c bi\"></i><i class=\"zc h cc\"></i><i class=\"zd g dc\"></i><i class=\"za i ai\"></i><i class=\"zb a bg\"></i><i class=\"zc j cg\"></i><i class=\"zd e df\"></i><i class=\"za d ag\"></i><i class=\"zb l bd\"></i><i class=\"zc j ca\"></i><i class=\"zd e da\"></i><i class=\"za b ai\"></i><i class=\"zb h bk\"></i><i class=\"zc j cc\"></i><i class=\"zd g dl\"></i><i class=\"za b ai\"></i><i class=\"zb a bl\"></i><i class=\"zc g cf\"></i><i class=\"zd d dk\"></i><i class=\"za a ab\"></i><i class=\"zb d bj\"></i><i class=\"zc e ck\"></i><i class=\"zd d de\"></i><i class=\"za i al\"></i><i class=\"zb e bc\"></i><i class=\"zc g ck\"></i><i class=\"zd j dg\"></i><i class=\"za d aa\"></i><i class=\"zb b bi\"></i><i class=\"zc h ce\"></i><i class=\"zd h dc\"></i><i class=\"za a al\"></i><i class=\"zb g bj\"></i><i class=\"zc b cc\"></i><i class=\"zd i df\"></i><i class=\"za e ae\"></i><i class=\"zb a bf\"></i><i class=\"zc e cb\"></i><i class=\"zd i da\"></i><i class=\"za d ae\"></i><i class=\"zb i bk\"></i><i class=\"zc h ca\"></i><i class=\"zd a df\"></i><i class=\"za a ac\"></i><i class=\"zb d bk\"></i><i class=\"zc k ce\"></i><i class=\"zd i dc\"></i><i class=\"za l af\"></i><i class=\"zb h bd\"></i><i class=\"zc l ck\"></i><i class=\"zd k dl\"></i><i class=\"za k ak\"></i><i class=\"zb g ba\"></i><i class=\"zc d cj\"></i><i class=\"zd a dl\"></i><i class=\"za b af\"></i><i class=\"zb c bi\"></i><i class=\"zc h cc\"></i><i class=\"zd g dc\"></i><i class=\"za i ab\"></i><i class=\"zb i bb\"></i><i class=\"zc g cd\"></i><i class=\"zd b dl\"></i><i class=\"za g al\"></i><i class=\"zb l bk\"></i><i class=\"zc k ce\"></i><i class=\"zd i dc\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41792468~SID~B790~S0~I117~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41792468~SID~B790~S0~I118~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    
+    {
+        "timestamp": "2025-03-06 16:21:35",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41501414~US",
+        "stock_number": "41501414~US",
+        "Final_Bid": "If Bid for $3,050",
+        "Details": {},
+        "VINDisplay": "<i class=\"za e af\"></i><i class=\"zb c bi\"></i><i class=\"zc h cc\"></i><i class=\"zd l da\"></i><i class=\"za i ab\"></i><i class=\"zb l bb\"></i><i class=\"zc c cb\"></i><i class=\"zd j dk\"></i><i class=\"za a al\"></i><i class=\"zb j bh\"></i><i class=\"zc b cc\"></i><i class=\"zd i df\"></i><i class=\"za b ad\"></i><i class=\"zb j be\"></i><i class=\"zc a ck\"></i><i class=\"zd d df\"></i><i class=\"za j ag\"></i><i class=\"zb l ba\"></i><i class=\"zc h cl\"></i><i class=\"zd j da\"></i><i class=\"za a ab\"></i><i class=\"zb d bj\"></i><i class=\"zc k cl\"></i><i class=\"zd h di\"></i><i class=\"za h aa\"></i><i class=\"zb j ba\"></i><i class=\"zc f ce\"></i><i class=\"zd l dh\"></i><i class=\"za b aa\"></i><i class=\"zb j bb\"></i><i class=\"zc k cg\"></i><i class=\"zd c dc\"></i><i class=\"za c ae\"></i><i class=\"zb g ba\"></i><i class=\"zc g cj\"></i><i class=\"zd a dl\"></i><i class=\"za l ah\"></i><i class=\"zb h bj\"></i><i class=\"zc f cd\"></i><i class=\"zd a dj\"></i><i class=\"za c aj\"></i><i class=\"zb d bb\"></i><i class=\"zc h ck\"></i><i class=\"zd l di\"></i><i class=\"za k ae\"></i><i class=\"zb d bc\"></i><i class=\"zc f cf\"></i><i class=\"zd j dc\"></i><i class=\"za b af\"></i><i class=\"zb k bf\"></i><i class=\"zc j ck\"></i><i class=\"zd g dc\"></i><i class=\"za i ae\"></i><i class=\"zb l bc\"></i><i class=\"zc c ca\"></i><i class=\"zd g dg\"></i><i class=\"za i af\"></i><i class=\"zb l bl\"></i><i class=\"zc c ca\"></i><i class=\"zd g da\"></i><i class=\"za g al\"></i><i class=\"zb h be\"></i><i class=\"zc k ce\"></i><i class=\"zd b dk\"></i><i class=\"za l aa\"></i><i class=\"zb k bb\"></i><i class=\"zc i ci\"></i><i class=\"zd i di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41501414~SID~B736~S0~I5~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:21:52",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41849115~US",
+        "stock_number": "41849115~US",
+        "Final_Bid": "Sold for $275",
+        "Details": {
+            "Seller": "State Farm Group Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "THEFT",
+            "Primary Damage": "Front end",
+            "ODO": "163496 mi (Actual)"
+        },
+        "VINDisplay": "<i class=\"za e aa\"></i><i class=\"zb d bc\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za k ab\"></i><i class=\"zb j ba\"></i><i class=\"zc e cc\"></i><i class=\"zd h dc\"></i><i class=\"za a ak\"></i><i class=\"zb k bl\"></i><i class=\"zc a ch\"></i><i class=\"zd g de\"></i><i class=\"za f ac\"></i><i class=\"zb l bh\"></i><i class=\"zc l cg\"></i><i class=\"zd g db\"></i><i class=\"za j ac\"></i><i class=\"zb l ba\"></i><i class=\"zc e cd\"></i><i class=\"zd d df\"></i><i class=\"za k ae\"></i><i class=\"zb f bi\"></i><i class=\"zc f cf\"></i><i class=\"zd j dc\"></i><i class=\"za i ae\"></i><i class=\"zb l bc\"></i><i class=\"zc b cd\"></i><i class=\"zd h dh\"></i><i class=\"za b af\"></i><i class=\"zb k bf\"></i><i class=\"zc b ci\"></i><i class=\"zd c dg\"></i><i class=\"za k ai\"></i><i class=\"zb l bl\"></i><i class=\"zc c ca\"></i><i class=\"zd g dg\"></i><i class=\"za k ai\"></i><i class=\"zb e bd\"></i><i class=\"zc d cf\"></i><i class=\"zd h dh\"></i><i class=\"za e ag\"></i><i class=\"zb g bb\"></i><i class=\"zc e cf\"></i><i class=\"zd j df\"></i><i class=\"za e aa\"></i><i class=\"zb f bi\"></i><i class=\"zc c ci\"></i><i class=\"zd j dj\"></i><i class=\"za j ae\"></i><i class=\"zb h bd\"></i><i class=\"zc b cb\"></i><i class=\"zd d db\"></i><i class=\"za k ah\"></i><i class=\"zb g ba\"></i><i class=\"zc g cj\"></i><i class=\"zd l di\"></i><i class=\"za l aa\"></i><i class=\"zb e bi\"></i><i class=\"zc a cg\"></i><i class=\"zd i di\"></i><i class=\"za k ak\"></i><i class=\"zb d bi\"></i><i class=\"zc g cj\"></i><i class=\"zd a dl\"></i><i class=\"za b ac\"></i><i class=\"zb j bl\"></i><i class=\"zc e cg\"></i><i class=\"zd i dg\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41849115~SID~B719~S0~I2~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41849115~SID~B719~S0~I3~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:21:59",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41698600~US",
+        "stock_number": "41698600~US",
+        "Final_Bid": "If Bid for $2,000",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Front end"
+        },
+        "VINDisplay": "<i class=\"za k ac\"></i><i class=\"zb h bc\"></i><i class=\"zc c ch\"></i><i class=\"zd k dd\"></i><i class=\"za d ak\"></i><i class=\"zb a bg\"></i><i class=\"zc i cj\"></i><i class=\"zd g dk\"></i><i class=\"za e al\"></i><i class=\"zb f bi\"></i><i class=\"zc c ci\"></i><i class=\"zd e dk\"></i><i class=\"za l al\"></i><i class=\"zb j bb\"></i><i class=\"zc k cg\"></i><i class=\"zd c dc\"></i><i class=\"za e al\"></i><i class=\"zb j bc\"></i><i class=\"zc f cf\"></i><i class=\"zd a dd\"></i><i class=\"za k ae\"></i><i class=\"zb j bc\"></i><i class=\"zc c ci\"></i><i class=\"zd j dj\"></i><i class=\"za k ab\"></i><i class=\"zb b bi\"></i><i class=\"zc h ce\"></i><i class=\"zd c dd\"></i><i class=\"za k af\"></i><i class=\"zb a bc\"></i><i class=\"zc f cj\"></i><i class=\"zd e dc\"></i><i class=\"za k ai\"></i><i class=\"zb b ba\"></i><i class=\"zc d cf\"></i><i class=\"zd d dl\"></i><i class=\"za a ae\"></i><i class=\"zb d bl\"></i><i class=\"zc a cb\"></i><i class=\"zd b de\"></i><i class=\"za l ai\"></i><i class=\"zb f bg\"></i><i class=\"zc h cj\"></i><i class=\"zd c df\"></i><i class=\"za i ae\"></i><i class=\"zb e bd\"></i><i class=\"zc c ca\"></i><i class=\"zd g da\"></i><i class=\"za a af\"></i><i class=\"zb b bd\"></i><i class=\"zc j ck\"></i><i class=\"zd e di\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc k cj\"></i><i class=\"zd a di\"></i><i class=\"za l ag\"></i><i class=\"zb i bb\"></i><i class=\"zc c cb\"></i><i class=\"zd i db\"></i><i class=\"za i ac\"></i><i class=\"zb h bd\"></i><i class=\"zc l ca\"></i><i class=\"zd k dl\"></i><i class=\"za f af\"></i><i class=\"zb j bd\"></i><i class=\"zc k cj\"></i><i class=\"zd e db\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41695989~SID~B790~S0~I4~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41698600~SID~B790~S0~I1~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    
+    {
+        "timestamp": "2025-03-06 16:23:15",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41530626~US",
+        "stock_number": "41530626~US",
+        "Final_Bid": "If Bid for $425",
+        "Details": {
+            "Seller": "Progressive Casualty Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "COLLISION",
+            "Primary Damage": "Left Side"
+        },
+        "VINDisplay": "<i class=\"za h ai\"></i><i class=\"zb h bd\"></i><i class=\"zc i ce\"></i><i class=\"zd l de\"></i><i class=\"za h ak\"></i><i class=\"zb g bd\"></i><i class=\"zc k ch\"></i><i class=\"zd g dh\"></i><i class=\"za f ai\"></i><i class=\"zb l bf\"></i><i class=\"zc k cb\"></i><i class=\"zd k dg\"></i><i class=\"za i ah\"></i><i class=\"zb l bh\"></i><i class=\"zc b cg\"></i><i class=\"zd j dg\"></i><i class=\"za g ae\"></i><i class=\"zb g bb\"></i><i class=\"zc k cc\"></i><i class=\"zd j df\"></i><i class=\"za j aj\"></i><i class=\"zb j bi\"></i><i class=\"zc l cb\"></i><i class=\"zd k df\"></i><i class=\"za k ag\"></i><i class=\"zb i bi\"></i><i class=\"zc k ck\"></i><i class=\"zd b dj\"></i><i class=\"za a aa\"></i><i class=\"zb d bk\"></i><i class=\"zc k ce\"></i><i class=\"zd i dc\"></i><i class=\"za k ai\"></i><i class=\"zb b ba\"></i><i class=\"zc b cd\"></i><i class=\"zd g dg\"></i><i class=\"za a ah\"></i><i class=\"zb l bh\"></i><i class=\"zc l cg\"></i><i class=\"zd h dj\"></i><i class=\"za i af\"></i><i class=\"zb l bl\"></i><i class=\"zc c ca\"></i><i class=\"zd g da\"></i><i class=\"za g aa\"></i><i class=\"zb d bk\"></i><i class=\"zc k ce\"></i><i class=\"zd f dd\"></i><i class=\"za i af\"></i><i class=\"zb l bc\"></i><i class=\"zc b cd\"></i><i class=\"zd d dl\"></i><i class=\"za i af\"></i><i class=\"zb l bc\"></i><i class=\"zc c ca\"></i><i class=\"zd g da\"></i><i class=\"za h ab\"></i><i class=\"zb d bg\"></i><i class=\"zc g ca\"></i><i class=\"zd j dk\"></i><i class=\"za h ai\"></i><i class=\"zb h bh\"></i><i class=\"zc i ce\"></i><i class=\"zd d db\"></i><i class=\"za l af\"></i><i class=\"zb i bl\"></i><i class=\"zc b cb\"></i><i class=\"zd d db\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41530626~SID~B653~S0~I3~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:23:20",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41875960~US",
+        "stock_number": "41875960~US",
+        "Final_Bid": "If Bid for $325",
+        "Details": {
+            "Seller": "TitleMax",
+            "Loss Type": "OTHER",
+            "Primary Damage": "Right Rear",
+            "ODO": "340665 mi (Actual)",
+            "Title/Sale Doc": "Repossession Paperwork (Georgia) Duplicate",
+            "Title/Sale Doc Note": "ACCIDENT HIST",
+            "ACV": "$6,175.00"
+        },
+        "VINDisplay": "<i class=\"za j aa\"></i><i class=\"zb c bl\"></i><i class=\"zc i cg\"></i><i class=\"zd b de\"></i><i class=\"za g af\"></i><i class=\"zb g bl\"></i><i class=\"zc j cg\"></i><i class=\"zd j dh\"></i><i class=\"za b ab\"></i><i class=\"zb l bd\"></i><i class=\"zc c cd\"></i><i class=\"zd l dj\"></i><i class=\"za b aa\"></i><i class=\"zb j bb\"></i><i class=\"zc k cg\"></i><i class=\"zd c dc\"></i><i class=\"za j al\"></i><i class=\"zb i bi\"></i><i class=\"zc a ca\"></i><i class=\"zd b dj\"></i><i class=\"za g al\"></i><i class=\"zb l bk\"></i><i class=\"zc k ce\"></i><i class=\"zd e dh\"></i><i class=\"za i ac\"></i><i class=\"zb i bl\"></i><i class=\"zc l ck\"></i><i class=\"zd k dl\"></i><i class=\"za c ak\"></i><i class=\"zb e ba\"></i><i class=\"zc e cb\"></i><i class=\"zd i da\"></i><i class=\"za c aj\"></i><i class=\"zb d be\"></i><i class=\"zc a cf\"></i><i class=\"zd a dh\"></i><i class=\"za a aa\"></i><i class=\"zb l bk\"></i><i class=\"zc j cd\"></i><i class=\"zd b dk\"></i><i class=\"za f aj\"></i><i class=\"zb f bk\"></i><i class=\"zc e cg\"></i><i class=\"zd a de\"></i><i class=\"za i ac\"></i><i class=\"zb h bh\"></i><i class=\"zc b cb\"></i><i class=\"zd k dl\"></i><i class=\"za a ac\"></i><i class=\"zb j bg\"></i><i class=\"zc c cg\"></i><i class=\"zd i dc\"></i><i class=\"za c ae\"></i><i class=\"zb g ba\"></i><i class=\"zc d cj\"></i><i class=\"zd k di\"></i><i class=\"za c af\"></i><i class=\"zb h bb\"></i><i class=\"zc c cc\"></i><i class=\"zd h de\"></i><i class=\"za k ac\"></i><i class=\"zb h bb\"></i><i class=\"zc d ch\"></i><i class=\"zd k dd\"></i><i class=\"za l aa\"></i><i class=\"zb d ba\"></i><i class=\"zc h cf\"></i><i class=\"zd i di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41875960~SID~B707~S0~I2~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41875960~SID~B707~S0~I3~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    {
+        "timestamp": "2025-03-06 16:23:22",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41875899~US",
+        "stock_number": "41875899~US",
+        "Final_Bid": "If Bid for $975",
+        "Details": {
+            "Seller": "State Farm Group Insurance",
+            "Seller Type": "Insurance",
+            "Loss Type": "THEFT"
+        },
+        "VINDisplay": "<i class=\"za d aj\"></i><i class=\"zb b bd\"></i><i class=\"zc c ce\"></i><i class=\"zd g dc\"></i><i class=\"za i al\"></i><i class=\"zb b bj\"></i><i class=\"zc b cg\"></i><i class=\"zd g db\"></i><i class=\"za f aa\"></i><i class=\"zb a bj\"></i><i class=\"zc k ci\"></i><i class=\"zd i dh\"></i><i class=\"za h ae\"></i><i class=\"zb e bk\"></i><i class=\"zc i cb\"></i><i class=\"zd b da\"></i><i class=\"za a ah\"></i><i class=\"zb e bc\"></i><i class=\"zc i ck\"></i><i class=\"zd j dg\"></i><i class=\"za k ac\"></i><i class=\"zb k bi\"></i><i class=\"zc a ci\"></i><i class=\"zd d di\"></i><i class=\"za h aa\"></i><i class=\"zb j ba\"></i><i class=\"zc f ce\"></i><i class=\"zd c dd\"></i><i class=\"za l aa\"></i><i class=\"zb c bf\"></i><i class=\"zc h cf\"></i><i class=\"zd b dd\"></i><i class=\"za e aa\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za h af\"></i><i class=\"zb j bb\"></i><i class=\"zc a cc\"></i><i class=\"zd c dc\"></i><i class=\"za l al\"></i><i class=\"zb j bb\"></i><i class=\"zc a cc\"></i><i class=\"zd c dh\"></i><i class=\"za f af\"></i><i class=\"zb j bd\"></i><i class=\"zc k ca\"></i><i class=\"zd a di\"></i><i class=\"za d aj\"></i><i class=\"zb b bd\"></i><i class=\"zc j ck\"></i><i class=\"zd g dc\"></i><i class=\"za k al\"></i><i class=\"zb d bc\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za i ab\"></i><i class=\"zb d bf\"></i><i class=\"zc j cl\"></i><i class=\"zd j dk\"></i><i class=\"za i af\"></i><i class=\"zb l bl\"></i><i class=\"zc b cd\"></i><i class=\"zd d dl\"></i><i class=\"za a af\"></i><i class=\"zb c bi\"></i><i class=\"zc j ck\"></i><i class=\"zd l da\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41875899~SID~B719~S0~I1~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41875899~SID~B719~S0~I2~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    {
+        "timestamp": "2025-03-06 16:23:41",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/42206475~US",
+        "stock_number": "42206475~US",
+        "Final_Bid": "If Bid for $2,850",
+        "Details": {
+            "Seller": "",
+            "Loss Type": "OTHER",
+            "Primary Damage": "Right Front",
+            "ODO": "108022 mi (Actual)",
+            "Title/Sale Doc": "Clear (Florida)",
+            "ACV": "$4,875.00",
+            "Airbags": "Intact",
+            "Keys": "Present",
+            "Start Code": "Run & Drive",
+            "Run & Drive": "yes",
+            "Stock Number": "<i class=\"za k ac\"></i><i class=\"zb e be\"></i><i class=\"zc c ch\"></i><i class=\"zd d di\"></i><i class=\"za e al\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd j dc\"></i><i class=\"za i ab\"></i><i class=\"zb i bb\"></i><i class=\"zc g cd\"></i><i class=\"zd b dl\"></i><i class=\"za e aa\"></i><i class=\"zb d bc\"></i><i class=\"zc g cc\"></i><i class=\"zd j dj\"></i><i class=\"za b af\"></i><i class=\"zb b bd\"></i><i class=\"zc c ce\"></i><i class=\"zd c dg\"></i><i class=\"za e af\"></i><i class=\"zb c bi\"></i><i class=\"zc c ce\"></i><i class=\"zd c dg\"></i><i class=\"za e af\"></i><i class=\"zb b bd\"></i><i class=\"zc h cc\"></i><i class=\"zd e di\"></i><i class=\"za k ac\"></i><i class=\"zb h bb\"></i><i class=\"zc c cc\"></i><i class=\"zd d di\"></i>",
+            "VIN": "<i class=\"za c ad\"></i><i class=\"zb i ba\"></i><i class=\"zc b ca\"></i><i class=\"zd c dk\"></i><i class=\"za l al\"></i><i class=\"zb j bb\"></i><i class=\"zc a cc\"></i><i class=\"zd l dg\"></i><i class=\"za j ac\"></i><i class=\"zb c bj\"></i><i class=\"zc b ck\"></i><i class=\"zd j de\"></i><i class=\"za a aa\"></i><i class=\"zb j bg\"></i><i class=\"zc k ce\"></i><i class=\"zd b dk\"></i><i class=\"za i ak\"></i><i class=\"zb k bj\"></i><i class=\"zc l cb\"></i><i class=\"zd d dc\"></i><i class=\"za a ac\"></i><i class=\"zb d bk\"></i><i class=\"zc j ci\"></i><i class=\"zd b dk\"></i><i class=\"za j aj\"></i><i class=\"zb j bi\"></i><i class=\"zc f ca\"></i><i class=\"zd d dc\"></i><i class=\"za b af\"></i><i class=\"zb c bc\"></i><i class=\"zc j ck\"></i><i class=\"zd c dg\"></i><i class=\"za c ae\"></i><i class=\"zb d bi\"></i><i class=\"zc d cj\"></i><i class=\"zd k di\"></i><i class=\"za i al\"></i><i class=\"zb l bh\"></i><i class=\"zc g ck\"></i><i class=\"zd j dg\"></i><i class=\"za e ac\"></i><i class=\"zb a bc\"></i><i class=\"zc e cb\"></i><i class=\"zd e dc\"></i><i class=\"za l af\"></i><i class=\"zb h bh\"></i><i class=\"zc l ca\"></i><i class=\"zd k dl\"></i><i class=\"za h al\"></i><i class=\"zb j bl\"></i><i class=\"zc i cl\"></i><i class=\"zd e db\"></i><i class=\"za k al\"></i><i class=\"zb j bc\"></i><i class=\"zc f ci\"></i><i class=\"zd e dk\"></i><i class=\"za k ae\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dc\"></i><i class=\"za l aa\"></i><i class=\"zb e bi\"></i><i class=\"zc a cg\"></i><i class=\"zd i di\"></i><i class=\"za l ag\"></i><i class=\"zb i bb\"></i><i class=\"zc c cb\"></i><i class=\"zd j dk\"></i>",
+            "Transmission": "Automatic",
+            "Cylinders": "4 Cyl",
+            "Fuel Type": "Gasoline",
+            "Engine": "2.0L I-4 DI, DOHC, VVT, turbo, 180HP",
+            "Drive Line Type": "All-Wheel Drive",
+            "Ext. Color": "White"
+        },
+        "VINDisplay": "<i class=\"za c ad\"></i><i class=\"zb i ba\"></i><i class=\"zc b ca\"></i><i class=\"zd c dk\"></i><i class=\"za l al\"></i><i class=\"zb j bb\"></i><i class=\"zc a cc\"></i><i class=\"zd l dg\"></i><i class=\"za j ac\"></i><i class=\"zb c bj\"></i><i class=\"zc b ck\"></i><i class=\"zd j de\"></i><i class=\"za a aa\"></i><i class=\"zb j bg\"></i><i class=\"zc k ce\"></i><i class=\"zd b dk\"></i><i class=\"za i ak\"></i><i class=\"zb k bj\"></i><i class=\"zc l cb\"></i><i class=\"zd d dc\"></i><i class=\"za a ac\"></i><i class=\"zb d bk\"></i><i class=\"zc j ci\"></i><i class=\"zd b dk\"></i><i class=\"za j aj\"></i><i class=\"zb j bi\"></i><i class=\"zc f ca\"></i><i class=\"zd d dc\"></i><i class=\"za b af\"></i><i class=\"zb c bc\"></i><i class=\"zc j ck\"></i><i class=\"zd c dg\"></i><i class=\"za c ae\"></i><i class=\"zb d bi\"></i><i class=\"zc d cj\"></i><i class=\"zd k di\"></i><i class=\"za i al\"></i><i class=\"zb l bh\"></i><i class=\"zc g ck\"></i><i class=\"zd j dg\"></i><i class=\"za e ac\"></i><i class=\"zb a bc\"></i><i class=\"zc e cb\"></i><i class=\"zd e dc\"></i><i class=\"za l af\"></i><i class=\"zb h bh\"></i><i class=\"zc l ca\"></i><i class=\"zd k dl\"></i><i class=\"za h al\"></i><i class=\"zb j bl\"></i><i class=\"zc i cl\"></i><i class=\"zd e db\"></i><i class=\"za k al\"></i><i class=\"zb j bc\"></i><i class=\"zc f ci\"></i><i class=\"zd e dk\"></i><i class=\"za k ae\"></i><i class=\"zb k bd\"></i><i class=\"zc g cc\"></i><i class=\"zd j dc\"></i><i class=\"za l aa\"></i><i class=\"zb e bi\"></i><i class=\"zc a cg\"></i><i class=\"zd i di\"></i><i class=\"za l ag\"></i><i class=\"zb i bb\"></i><i class=\"zc c cb\"></i><i class=\"zd j dk\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=42206475~SID~B736~S0~I5~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=42206475~SID~B736~S0~I6~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    },
+    
+    {
+        "timestamp": "2025-03-06 16:24:41",
+        "stock_number_href": "https://www.iaai.com/VehicleDetail/41826829~US",
+        "stock_number": "41826829~US",
+        "Final_Bid": "If Bid for $6,150",
+        "Details": {},
+        "VINDisplay": "<i class=\"za d ah\"></i><i class=\"zb k bi\"></i><i class=\"zc c ch\"></i><i class=\"zd k dd\"></i><i class=\"za g af\"></i><i class=\"zb g bc\"></i><i class=\"zc i cj\"></i><i class=\"zd e df\"></i><i class=\"za e aa\"></i><i class=\"zb d bc\"></i><i class=\"zc f cf\"></i><i class=\"zd e dk\"></i><i class=\"za a ak\"></i><i class=\"zb l bj\"></i><i class=\"zc e cl\"></i><i class=\"zd g dh\"></i><i class=\"za e al\"></i><i class=\"zb f bi\"></i><i class=\"zc g cc\"></i><i class=\"zd a dd\"></i><i class=\"za e aa\"></i><i class=\"zb f bi\"></i><i class=\"zc f ci\"></i><i class=\"zd e dk\"></i><i class=\"za j ac\"></i><i class=\"zb l ba\"></i><i class=\"zc b ck\"></i><i class=\"zd j da\"></i><i class=\"za e ac\"></i><i class=\"zb a bf\"></i><i class=\"zc b ce\"></i><i class=\"zd h dl\"></i><i class=\"za d ah\"></i><i class=\"zb k bi\"></i><i class=\"zc c ch\"></i><i class=\"zd h de\"></i><i class=\"za f ai\"></i><i class=\"zb c bg\"></i><i class=\"zc k cb\"></i><i class=\"zd k dg\"></i><i class=\"za l ai\"></i><i class=\"zb f bd\"></i><i class=\"zc b ch\"></i><i class=\"zd b dg\"></i><i class=\"za h al\"></i><i class=\"zb b bb\"></i><i class=\"zc k cj\"></i><i class=\"zd i dg\"></i><i class=\"za j af\"></i><i class=\"zb h bb\"></i><i class=\"zc a ci\"></i><i class=\"zd h de\"></i><i class=\"za j ai\"></i><i class=\"zb c bf\"></i><i class=\"zc h cf\"></i><i class=\"zd g dd\"></i><i class=\"za h ai\"></i><i class=\"zb h bh\"></i><i class=\"zc i ce\"></i><i class=\"zd k dl\"></i><i class=\"za l aa\"></i><i class=\"zb e bi\"></i><i class=\"zc b cf\"></i><i class=\"zd i dl\"></i><i class=\"za c af\"></i><i class=\"zb k bi\"></i><i class=\"zc d ch\"></i><i class=\"zd d di\"></i>",
+        "Images": [
+            "https://anvis.iaai.com/resizer?imageKeys=41826829~SID~B790~S0~I3~RW2576~H1932~TH0&width=640&height=480",
+            "https://anvis.iaai.com/resizer?imageKeys=41826829~SID~B790~S0~I4~RW2576~H1932~TH0&width=640&height=480"
+        ]
+    }
+]

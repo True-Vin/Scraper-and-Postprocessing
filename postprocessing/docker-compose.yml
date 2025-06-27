@@ -1,0 +1,92 @@
+version: "3.9"
+
+# Shared AWS credentials and configuration
+x-env-base: &env_base
+  AWS_ACCESS_KEY_ID:      ${AWS_ACCESS_KEY_ID}
+  AWS_SECRET_ACCESS_KEY:  ${AWS_SECRET_ACCESS_KEY}
+  AWS_REGION:             ${AWS_REGION:-eu-north-1}
+  DYNAMODB_TABLE_NAME:    ${DYNAMODB_TABLE_NAME:-AuctionData}
+  S3_BUCKET_NAME:         ${S3_BUCKET_NAME:-auctionshtml}
+  SHARD_ID:               ${SHARD_ID:-0}
+  TOTAL_SHARDS:           ${TOTAL_SHARDS:-1}
+  PYTHONUNBUFFERED:       1
+
+# Base settings for getdata
+x-getdata-base: &getdata_defaults
+  build: ./allpages
+  image: getdata-img
+  container_name: getdata
+  environment: *env_base
+  volumes:
+    - ./data:/app/data
+  restart: always
+  networks:
+    - app_network
+
+services:
+  # ─── Phase‑1 : pull all listing pages ──────────────────────
+  getdata:
+    <<: *getdata_defaults
+
+  # ─── Phase‑2 : HTML generator ──────────────────────────────
+  htmlgen:
+    build: ./htmlgen
+    image: htmlgen-img
+    container_name: htmlgen
+    environment: *env_base
+    volumes:
+      - ./data:/app/data
+    restart: always
+    command: ["python", "htmlgen.py"]
+    networks:
+      - app_network
+    ports:
+      - "5002:5002"
+
+  # ─── Phase‑3 : Converter / processor ───────────────────────
+  converter:
+    build: ./converter
+    image: converter-img
+    container_name: converter
+    environment: *env_base
+    volumes:
+      - ./data:/app/data
+    depends_on:
+      - htmlgen
+    restart: always
+    command: ["python", "converter.py"]
+    networks:
+      - app_network
+    ports:
+      - "5003:5003"
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+  # ─── Phase‑4 : NEWDATA – update "newdata" field in Dynamo ──
+  newdata:
+    build: ./newdata          # directory that contains the Dockerfile above
+    image: newdata-img
+    container_name: newdata
+    environment: *env_base
+    volumes:
+      - ./data:/app/data
+   
+    restart: always
+    command: ["python", "newdata.py"]
+    networks:
+      - app_network
+    logging:
+      driver: "json-file"
+      options:
+        max-size: "10m"
+        max-file: "3"
+
+volumes:
+  data:
+
+networks:
+  app_network:
+    driver: bridge

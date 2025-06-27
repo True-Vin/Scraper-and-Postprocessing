@@ -1,0 +1,63 @@
+[
+  {
+    "stock_number": "42429289~US",
+    "stock_number_href": "https://www.iaai.com/VehicleDetail/42429289~US",
+    "VINDisplay": "<i class=\"za e al\"></i><i class=\"zb d bc\"></i><i class=\"zc f ci\"></i><i class=\"zd a dd\"></i><i class=\"za f aa\"></i><i class=\"zb i bd\"></i><i class=\"zc k cb\"></i><i class=\"zd c di\"></i><i class=\"za d ah\"></i><i class=\"zb h bc\"></i><i class=\"zc d ch\"></i><i class=\"zd k dd\"></i><i class=\"za b ad\"></i><i class=\"zb e bh\"></i><i class=\"zc a ck\"></i><i class=\"zd d dj\"></i><i class=\"za g ab\"></i><i class=\"zb i bg\"></i><i class=\"zc g cg\"></i><i class=\"zd f db\"></i><i class=\"za l af\"></i><i class=\"zb h bd\"></i><i class=\"zc l ck\"></i><i class=\"zd d db\"></i><i class=\"za l ae\"></i><i class=\"zb b be\"></i><i class=\"zc b cl\"></i><i class=\"zd l dl\"></i><i class=\"za l ah\"></i><i class=\"zb h bj\"></i><i class=\"zc c cl\"></i><i class=\"zd e de\"></i><i class=\"za k ae\"></i><i class=\"zb d bc\"></i><i class=\"zc c ci\"></i><i class=\"zd j dj\"></i><i class=\"za h ag\"></i><i class=\"zb l be\"></i><i class=\"zc k cf\"></i><i class=\"zd f dh\"></i><i class=\"za i ak\"></i><i class=\"zb k bj\"></i><i class=\"zc l cf\"></i><i class=\"zd d da\"></i><i class=\"za l af\"></i><i class=\"zb g be\"></i><i class=\"zc i ce\"></i><i class=\"zd d db\"></i><i class=\"za j ae\"></i><i class=\"zb i bl\"></i><i class=\"zc l ck\"></i><i class=\"zd d db\"></i><i class=\"za f aj\"></i><i class=\"zb j bl\"></i><i class=\"zc k cj\"></i><i class=\"zd a di\"></i><i class=\"za h ab\"></i><i class=\"zb d bg\"></i><i class=\"zc j cl\"></i><i class=\"zd b dl\"></i><i class=\"za b af\"></i><i class=\"zb c bc\"></i><i class=\"zc h cc\"></i><i class=\"zd l da\"></i><i class=\"za c af\"></i><i class=\"zb k bi\"></i><i class=\"zc a ci\"></i><i class=\"zd h df\"></i>",
+    "Final_Bid": "N/A",
+    "Veh_detail_fields": [
+      {
+        "BlackBookACV": "$2,075.00"
+      },
+      {
+        "LossTypeDisplay": "OTHER"
+      },
+      {
+        "PrimaryDamageDisplay": "None"
+      },
+      {
+        "OdometerDisplay": "140573 mi (Actual)"
+      },
+      {
+        "SaleDocumentDisplay": "Restored (Arizona) Salvage"
+      },
+      {
+        "BidderClass": "All"
+      },
+      {
+        "BlackBookACV": "$2,075.00"
+      },
+      {
+        "Airbags": "Intact"
+      },
+      {
+        "Keys": "Present"
+      },
+      {
+        "Starts": "Run & Drive"
+      },
+      {
+        "Drives": "yes"
+      },
+      {
+        "Transmission": "Automatic"
+      },
+      {
+        "Cylinder": "4 Cyl"
+      },
+      {
+        "FuelType": "Gasoline"
+      },
+      {
+        "Engine": "2.5L I-4 DOHC, VVT, 175HP"
+      },
+      {
+        "DriveTrainDisplay": "Front Wheel Drive"
+      },
+      {
+        "ExteriorColor": "Black"
+      }
+    ],
+    "one_image": "https://anvis.iaai.com/resizer?imageKeys=42429289~SID~B151~S1~I7~RW2576~H1932~TH0&width=640&height=480",
+    "timestamp": "2025-05-02 19:46:15"
+  }
+]

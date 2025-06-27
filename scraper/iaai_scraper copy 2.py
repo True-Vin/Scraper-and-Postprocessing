@@ -1,0 +1,781 @@
+import time
+import random
+import json
+import threading
+import boto3
+import os
+from pyvirtualdisplay import Display
+from undetected_chromedriver import Chrome, ChromeOptions
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+from selenium.common.exceptions import (
+    TimeoutException,
+    NoSuchElementException,
+    ElementClickInterceptedException,
+    StaleElementReferenceException,
+    WebDriverException
+)
+from urllib3.exceptions import NewConnectionError
+from bs4 import BeautifulSoup   # New import for BS4 processing
+
+# AWS configuration
+AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
+AWS_SECRET_ACCESS_KEY = os.environ.get('AWS_SECRET_ACCESS_KEY')
+AWS_REGION = os.environ.get('AWS_REGION', 'us-east-1')  # Changed to us-east-1
+
+# Initialize AWS DynamoDB
+dynamodb = boto3.resource(
+    "dynamodb",
+    aws_access_key_id=AWS_ACCESS_KEY_ID,
+    aws_secret_access_key=AWS_SECRET_ACCESS_KEY,
+    region_name=AWS_REGION
+)
+table = dynamodb.Table("AuctionData")
+
+# Set up virtual display for headless environment
+display = Display(visible=0, size=(1920, 1080))
+display.start()
+
+# Output directory
+OUTPUT_DIR = os.environ.get('OUTPUT_DIR', '/app/data')
+os.makedirs(OUTPUT_DIR, exist_ok=True)
+RESULT_FILE = os.path.join(OUTPUT_DIR, 'result.json')
+
+# Credentials from environment or fallback
+EMAIL = os.environ.get('IAAI_EMAIL')
+PASSWORD = os.environ.get('IAAI_PASSWORD')
+
+# List of user agents
+user_agents = [
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:108.0) Gecko/20100101 Firefox/108.0",
+    "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.140 Safari/537.36",
+    "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/116.0.5845.140 Safari/537.36",
+    "Mozilla/5.0 (iPhone; CPU iPhone OS 16_6 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.6 Mobile/15E148 Safari/604.1",
+    "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Edg/116.0.1938.69"
+]
+
+def get_chrome_options():
+    """Return a fresh instance of ChromeOptions with desired settings."""
+    options = ChromeOptions()
+    options.add_argument("--no-sandbox")
+    options.add_argument("--disable-dev-shm-usage")
+    options.add_argument("--start-maximized")
+    options.add_argument("--disable-extensions")
+    options.add_argument("--disable-infobars")
+    options.add_argument("--disable-web-security")
+    options.add_argument("--allow-running-insecure-content")
+    options.add_argument("--incognito")
+    options.add_argument(f"user-agent={random.choice(user_agents)}")
+    return options
+
+# Global set and lock to track which auctions (by data-id) have been opened
+opened_data_ids = set()
+opened_ids_lock = threading.Lock()
+
+# Global counter and lock to track the number of open tabs (driver instances)
+tabs_opened = 1  # initial tab opened in run_scraper
+tabs_opened_lock = threading.Lock()
+
+# Global tracking for containers already being monitored
+monitored_containers = set()
+monitored_containers_lock = threading.Lock()
+
+def log_with_timestamp(message):
+    """Log message with timestamp for better Docker logs."""
+    timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.localtime())
+    print(f"[{timestamp}] {message}")
+
+def wait_for_loader_to_disappear(driver, timeout=300):
+    try:
+        WebDriverWait(driver, timeout).until(
+            lambda d: not d.find_element(By.CLASS_NAME, "loader__shape").is_displayed()
+        )
+        print("Loader disappeared.")
+    except (TimeoutException, NoSuchElementException):
+        print("Loader does not exist or took too long to disappear.")
+
+def slow_typing(text, element, delay=0.5):
+    """Simulates human typing by typing one character at a time."""
+    for char in text:
+        element.send_keys(char)
+        time.sleep(random.uniform(0.1, delay))
+
+def append_to_dynamodb(data):
+    def upload():
+        try:
+            item = {
+                "stock_number": data["stock_number"],  # Primary Key
+                "timestamp": data["timestamp"],
+                "stock_number_href": data.get("stock_number_href", ""),
+                "final_bid": data.get("Final_Bid", "N/A"),
+                "vin_display": data.get("VINDisplay", ""),
+                "details": json.dumps(data.get("Details", {})),
+                "images": json.dumps(data.get("Images", [])),
+                "htmlgen_passed": False,
+                "imgserv_passed": False,
+                "converter_passed": False
+            }
+            table.put_item(Item=item)
+            print(f"✅ Appended to DynamoDB: {data['stock_number']}")
+        except Exception as e:
+            print(f"❌ Error appending to DynamoDB: {e}")
+    threading.Thread(target=upload).start()
+
+def close_sidebar(driver):
+    """Attempts to click the close sidebar button if it exists."""
+    try:
+        close_button = WebDriverWait(driver, 2).until(
+            EC.element_to_be_clickable((By.CSS_SELECTOR, "button.main-nav__close.btn--header-close"))
+        )
+        close_button.click()
+        log_with_timestamp("✅ Clicked the close sidebar button.")
+        time.sleep(0.5)
+    except (TimeoutException, NoSuchElementException):
+        log_with_timestamp("⚠️ Sidebar close button not found or not clickable.")
+    except Exception as e:
+        log_with_timestamp(f"⚠️ Error clicking close sidebar button: {e}")
+        screenshot_path = os.path.join(OUTPUT_DIR, 'close_sidebar_error.png')
+        driver.save_screenshot(screenshot_path)
+
+def close_ended_auctions(driver):
+    """
+    Continuously checks for ended auctions and attempts to close them.
+    Exits the loop if the driver is no longer active.
+    """
+    while True:
+        try:
+            containers = driver.find_elements(By.CSS_SELECTOR, ".AuctionContainer.event__item")
+        except Exception as e:
+            log_with_timestamp("close_ended_auctions: driver appears to be closed; exiting thread: " + str(e))
+            break
+        for container in containers:
+            try:
+                auction_ended = container.find_element(By.CSS_SELECTOR, ".event-empty.event-empty--ended")
+                log_with_timestamp("Auction has ended. Attempting to close the auction...")
+                close_button = container.find_element(By.CSS_SELECTOR, "button.btn--header-close.CloseAuction")
+                close_button.click()
+                log_with_timestamp("Auction closed.")
+            except NoSuchElementException:
+                continue
+            except StaleElementReferenceException as e:
+                log_with_timestamp("Stale element reference encountered when closing auction. Continuing")
+                continue
+            except Exception as e:
+                log_with_timestamp("Error closing auction: " + str(e))
+                screenshot_path = os.path.join(OUTPUT_DIR, 'close_ended_auctions_error.png')
+                driver.save_screenshot(screenshot_path)
+                continue
+        time.sleep(5)
+
+def ensure_12_containers(driver, written_stock_numbers_lock, written_stock_numbers):
+    """
+    Ensures there are 12 containers on the page by clicking 'Join More Auctions' and 'Add Item' buttons.
+    Uses the add-item button's data-id to track which auctions have been opened.
+    If the current driver has reached 12 containers, spawns a new tab for additional ones.
+    """
+    containers = driver.find_elements(By.CSS_SELECTOR, ".AuctionContainer.event__item")
+    if len(containers) < 12:
+        print(f"Found {len(containers)} containers. Clicking 'Join More Auctions'...")
+        try:
+            join_more_button = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.ID, "auctionsbutton"))
+            )
+            join_more_button.click()
+            print("Clicked 'Join More Auctions'.")
+        except Exception as e:
+            print(f"⚠️ Error clicking 'Join More Auctions': {e}")
+            return
+        time.sleep(2)
+        while len(containers) < 12:
+            try:
+                add_item_buttons = driver.find_elements(By.CSS_SELECTOR, "button.js-add-item")
+                for button in add_item_buttons:
+                    try:
+                        data_id = button.get_attribute("data-id")
+                        with opened_ids_lock:
+                            already_opened = data_id in opened_data_ids
+                        if already_opened:
+                            continue
+                        if len(containers) < 12:
+                            button.click()
+                            log_with_timestamp("✅ Clicked 'Add Item' button for data-id: " + data_id)
+                            with opened_ids_lock:
+                                opened_data_ids.add(data_id)
+                            time.sleep(0.5)
+                            containers = driver.find_elements(By.CSS_SELECTOR, ".AuctionContainer.event__item")
+                            if len(containers) >= 12:
+                                break
+                        else:
+                            log_with_timestamp("Current driver reached 12 containers. Spawning new tab for data-id: " + data_id)
+                            with tabs_opened_lock:
+                                log_with_timestamp(f"Tabs currently open: {tabs_opened}")
+                            t = threading.Thread(
+                                target=spawn_new_tab_for_button,
+                                args=(driver.current_url, data_id, written_stock_numbers_lock, written_stock_numbers)
+                            )
+                            t.start()
+                    except ElementClickInterceptedException:
+                        log_with_timestamp("⚠️ 'Add Item' button not clickable right now...") 
+                        screenshot_path = os.path.join(OUTPUT_DIR, 'add_items_error.png')
+                        driver.save_screenshot(screenshot_path)
+                        join_more_button = WebDriverWait(driver, 10).until(
+                            EC.element_to_be_clickable((By.ID, "auctionsbutton"))
+                        )
+                        join_more_button.click()
+                        continue
+                    except Exception as e:
+                        log_with_timestamp("⚠️ Error clicking 'Add Item' button: " + str(e))
+                        screenshot_path = os.path.join(OUTPUT_DIR, 'add_items_error.png')
+                        driver.save_screenshot(screenshot_path)
+                        join_more_button = WebDriverWait(driver, 10).until(
+                            EC.element_to_be_clickable((By.ID, "auctionsbutton"))
+                        )
+                        join_more_button.click()
+                        continue
+            except Exception as e:
+                log_with_timestamp("⚠️ Error finding 'Add Item' buttons: " + str(e))
+                break
+            containers = driver.find_elements(By.CSS_SELECTOR, ".AuctionContainer.event__item")
+        print(f"✅ Now have {len(containers)} containers in this tab.")
+
+def spawn_new_tab_for_button(join_url, target_data_id, written_stock_numbers_lock, written_stock_numbers):
+    """
+    Spawns a new browser instance (tab/window) to open an auction container corresponding to target_data_id.
+    The new driver logs in, navigates to the same join page, clicks the add-item button (if not already clicked),
+    then ensures 12 containers and processes them using the new snapshot-based BS4 extraction along with dedicated container polling.
+    """
+    global tabs_opened
+    driver_new = Chrome(options=get_chrome_options())
+    try:
+        with tabs_opened_lock:
+            tabs_opened += 1
+            log_with_timestamp(f"New tab spawned. Total tabs opened: {tabs_opened}")
+        login_to_iaai(driver_new)
+        log_with_timestamp("New tab: Navigating to join page: " + join_url)
+        driver_new.get(join_url)
+        wait_for_loader_to_disappear(driver_new)
+        time.sleep(2)
+        buttons = driver_new.find_elements(By.CSS_SELECTOR, "button.js-add-item")
+        for button in buttons:
+            data_id = button.get_attribute("data-id")
+            if data_id == target_data_id:
+                with opened_ids_lock:
+                    if data_id not in opened_data_ids:
+                        button.click()
+                        log_with_timestamp("New tab: Clicked 'Add Item' button for data-id: " + data_id)
+                        opened_data_ids.add(data_id)
+                        break
+        ensure_12_containers(driver_new, written_stock_numbers_lock, written_stock_numbers)
+        
+        # ─── NEW: Start snapshot-based processing in the new tab ─────────────────
+        snapshot_thread = threading.Thread(
+            target=continuous_snapshot, 
+            args=(driver_new, written_stock_numbers_lock, written_stock_numbers)
+        )
+        snapshot_thread.daemon = True
+        snapshot_thread.start()
+        # In the new tab loop, we also keep ensuring containers and now also spawn dedicated monitoring threads.
+        while True:
+            try:
+                ensure_12_containers(driver_new, written_stock_numbers_lock, written_stock_numbers)
+                process_new_containers(driver_new, written_stock_numbers_lock, written_stock_numbers)
+                time.sleep(5)
+            except Exception as loop_error:
+                log_with_timestamp("Error during ensure_12_containers loop in new tab: " + str(loop_error))
+                time.sleep(5)
+        # ─────────────────────────────────────────────────────────────────────────
+        
+    except Exception as e:
+        log_with_timestamp("Error in spawn_new_tab_for_button: " + str(e))
+    finally:
+        try:
+            driver_new.quit()
+        except Exception as close_error:
+            log_with_timestamp("Error closing new tab driver: " + str(close_error))
+        with tabs_opened_lock:
+            tabs_opened -= 1
+            log_with_timestamp(f"Tab closed. Total tabs remaining: {tabs_opened}")
+
+def process_container(driver, container, written_stock_numbers_lock, written_stock_numbers):
+    """
+    Processes a single auction container. Mirrors the original container loop logic,
+    with added duplicate checking and waiting for the 'Bidding Closed' indicator.
+    (Note: This function is still kept for legacy or tab-specific actions.)
+    """
+    try:
+        try:
+            auction_ended = container.find_element(By.CSS_SELECTOR, ".event-empty.event-empty--ended")
+            log_with_timestamp("Auction has ended; skipping (handled by thread).")
+            return
+        except NoSuchElementException:
+            pass
+        try:
+            leave_auction_msg = container.find_element(By.ID, "LeaveAuctionConfirmationMsg")
+            if (leave_auction_msg.is_displayed() and
+                "You are already logged into this auction.Press OK to continue" in leave_auction_msg.text):
+                cancel_button = container.find_element(
+                    By.CSS_SELECTOR,
+                    "button.btn.btn--xs.btn--cancel.Action[data-actionname='LeaveAuctionConfirmationCancel'][data-dismiss='modal']"
+                )
+                cancel_button.click()
+                log_with_timestamp("Clicked the 'Cancel' button in the 'Leave Auction Confirmation' dialog.")
+                return
+        except NoSuchElementException:
+            pass
+
+        # Attempt to extract VINDisplay with retries for stale element issues.
+        vin_display = ""
+        max_attempts = 3
+        for attempt in range(max_attempts):
+            try:
+                vin_display_element = container.find_element(
+                    By.CSS_SELECTOR, "span.data-list__value[data-bind*=\"html: Attributes['VINDisplay']\"]"
+                )
+                vin_display = vin_display_element.get_attribute("innerHTML").strip()
+                break  # Successfully retrieved VINDisplay, exit loop.
+            except StaleElementReferenceException as e:
+                log_with_timestamp(f"⚠️ Attempt {attempt + 1} for VINDisplay: Stale element reference, retrying...")
+                time.sleep(1)
+            except Exception as e:
+                log_with_timestamp("Error extracting VINDisplay: " + str(e))
+                screenshot_path = os.path.join(OUTPUT_DIR, 'vin_display_error.png')
+                driver.save_screenshot(screenshot_path)
+                break
+
+        try:
+            stock_number_element = container.find_element(By.CLASS_NAME, "stock-number")
+            try:
+                stock_number_link = stock_number_element.find_element(By.TAG_NAME, "a")
+            except NoSuchElementException:
+                log_with_timestamp("No <a> tag found during polling.")
+                return
+            stock_number_link = stock_number_element.find_element(By.TAG_NAME, "a")
+            stock_number_href = stock_number_link.get_attribute("href")
+            stock_number = stock_number_href.split("/")[-1]
+            log_with_timestamp(f"Extracted stock number: {stock_number}")
+        except StaleElementReferenceException:
+            log_with_timestamp("Stale element encountered extracting stock number; skipping container.")
+            return
+
+        with written_stock_numbers_lock:
+            if stock_number in written_stock_numbers:
+                log_with_timestamp(f"Duplicate stock number {stock_number} detected; skipping container.")
+                return
+
+        log_with_timestamp("Polling for 'Bidding Closed' indicator...")
+        try:
+            WebDriverWait(container, 10).until(
+                EC.presence_of_element_located((By.CSS_SELECTOR, "h2.media-banner__heading[data-translate='BiddingClosed']"))
+            )
+        except TimeoutException:
+            log_with_timestamp("Bidding Closed indicator did not appear; skipping container.")
+            return
+
+        final_bid = "N/A"
+        bid_selectors = [
+            "h3#soldOthersOverLayMsg",
+            "h3#soldCurrentUserOverLayMsg",
+            "h3#notSoldOverLayMsg",
+            "h3.media-banner__subhead"
+        ]
+        for selector in bid_selectors:
+            try:
+                final_bid_element = container.find_element(By.CSS_SELECTOR, selector)
+                final_bid_text = monitor_element_text(driver, final_bid_element, timeout=60, poll_frequency=0.05)
+                if final_bid_text and "N/A" not in final_bid_text:
+                    final_bid = final_bid_text
+                    log_with_timestamp(f"Found final bid using {selector}: {final_bid}")
+                    break
+                else:
+                    log_with_timestamp("❗ Attempting to read final bid text directly if monitor missed it...")
+                    direct_start = time.time()
+                    while time.time() - direct_start < 3:
+                        direct_text = final_bid_element.text.strip()
+                        if direct_text:
+                            final_bid = direct_text
+                            log_with_timestamp(f"Found final bid directly using {selector}: {final_bid}")
+                            break
+                        time.sleep(0.05)
+                    if final_bid != "N/A":
+                        break
+            except (NoSuchElementException, StaleElementReferenceException):
+                continue
+            except Exception as e:
+                log_with_timestamp(f"Error checking {selector}: {e}")
+        if final_bid == "N/A":
+            log_with_timestamp("Skipping container due to N/A final bid after exhaustive check")
+        timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+        data = {
+            "timestamp": timestamp,
+            "stock_number_href": stock_number_href,
+            "stock_number": stock_number,
+            "Final_Bid": final_bid,
+            "VINDisplay": vin_display,
+        }
+        append_to_dynamodb(data)
+        with written_stock_numbers_lock:
+            written_stock_numbers.add(stock_number)
+        log_with_timestamp("Data successfully appended for container: " + json.dumps(data, indent=2))
+    
+    except StaleElementReferenceException as e:
+        log_with_timestamp("Stale element reference encountered during container processing. Continuing.")
+        return
+    except NoSuchElementException as e:
+        log_with_timestamp("Container might be loading, waiting for it to load.")
+        return
+    except Exception as container_error:
+        log_with_timestamp("Error during container processing: " + str(container_error))
+        screenshot_path = os.path.join(OUTPUT_DIR, 'error.png')
+        driver.save_screenshot(screenshot_path)
+
+def monitor_element_text(driver, element, timeout=30, poll_frequency=0.05):
+    """Monitors the text of an element and captures it when it changes."""
+    initial_text = element.text
+    start_time = time.time()
+    while time.time() - start_time < timeout:
+        current_text = element.text
+        if current_text != initial_text:
+            print(f"Text changed to: {current_text}")
+            return current_text
+        time.sleep(poll_frequency)
+    print("Text did not change within the timeout period.")
+    return None
+
+def login_to_iaai(driver):
+    log_with_timestamp("Opening Google...")
+    driver.get("https://www.google.com")
+    time.sleep(random.uniform(2, 4))
+    log_with_timestamp("Navigating to IAAI...")
+    driver.get("https://iaai.com")
+    WebDriverWait(driver, 40).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+    log_with_timestamp("Clicking on Login...")
+    log_in_button = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, "//*[@id='loginRow']/div[1]/a[2]"))
+    )
+    log_in_button.click()
+    time.sleep(random.uniform(1, 2))
+    log_with_timestamp("Waiting for login fields...")
+    email_field = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.ID, "Email")))
+    password_field = WebDriverWait(driver, 20).until(EC.visibility_of_element_located((By.ID, "Password")))
+    log_with_timestamp("Entering email and password...")
+    slow_typing(EMAIL, email_field)
+    time.sleep(random.uniform(1, 2))
+    slow_typing(PASSWORD, password_field)
+    log_with_timestamp("Logging in...")
+    login_button = WebDriverWait(driver, 20).until(
+        EC.element_to_be_clickable((By.XPATH, "//button[@type='submit' and contains(@class, 'btn-primary')]"))
+    )
+    login_button.click()
+    time.sleep(random.uniform(2, 4))
+    log_with_timestamp("Logged in...")
+    time.sleep(15)
+
+def continuous_snapshot(driver, written_stock_numbers_lock, written_stock_numbers):
+    """
+    Continuously takes a snapshot of the entire page every 1 second and spawns
+    a separate thread to process the snapshot via BS4.
+    """
+    while True:
+        try:
+            page_html = driver.page_source
+            threading.Thread(
+                target=process_snapshot_with_bs4, 
+                args=(page_html, written_stock_numbers_lock, written_stock_numbers)
+            ).start()
+        except Exception as e:
+            log_with_timestamp("Error capturing snapshot: " + str(e))
+        time.sleep(1)
+
+# ─── Global memory for BS4 data accumulation ───────────────────────────────
+bs4_data_memory = {}
+bs4_data_lock = threading.Lock()
+# ─────────────────────────────────────────────────────────────────────────────
+
+def process_snapshot_with_bs4(page_html, written_stock_numbers_lock, written_stock_numbers):
+    """
+    Uses BeautifulSoup to process the provided snapshot (HTML source) and extract auction data.
+    Instead of skipping containers with final bid "N/A", it will accumulate data per container
+    and wait in memory for a subsequent poll to capture the final bid.
+    Additionally, for containers that do not show the auction ended indicator,
+    the container HTML is saved locally for further study.
+    """
+    try:
+        soup = BeautifulSoup(page_html, "html.parser")
+        containers_bs = soup.select(".AuctionContainer.event__item")
+        log_with_timestamp(f"BS4: Found {len(containers_bs)} auction container(s) in snapshot.")
+        for container in containers_bs:
+            # Skip containers that have ended
+            if container.select_one(".event-empty.event-empty--ended"):
+                log_with_timestamp("BS4: Auction ended; skipping container.")
+                continue
+
+            # Extract stock number information
+            stock_number_link = container.select_one(".stock-number a")
+            if not stock_number_link:
+                continue
+            stock_number_href = stock_number_link.get("href", "")
+            stock_number = stock_number_href.split("/")[-1] if stock_number_href else ""
+            if not stock_number:
+                continue
+
+            # Save container HTML locally for study.
+        
+            with bs4_data_lock:
+                # Get the existing entry for this stock number or create a new one
+                entry = bs4_data_memory.get(stock_number, {
+                    "stock_number_href": stock_number_href,
+                    "stock_number": stock_number,
+                    "VINDisplay": None,
+                    "Final_Bid": "N/A",
+                    "timestamp": time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+                })
+
+                # Update VINDisplay if available and not already recorded.
+                vin_display_element = container.select_one("span.data-list__value[data-bind*='html: Attributes[\"VINDisplay\"]']")
+                log_with_timestamp(f"BS4: VINDisplay ELEMENT for {stock_number} : {vin_display_element}")
+                if vin_display_element:
+                    vin_value = vin_display_element.decode_contents().strip()
+                    if vin_value and not entry.get("VINDisplay"):
+                        entry["VINDisplay"] = vin_value
+                        log_with_timestamp(f"BS4: Updated VINDisplay for {stock_number} to: {vin_value}")
+
+                # Check for the bidding closed indicator to attempt to capture the final bid.
+                if container.select_one("h2.media-banner__heading[data-translate='BiddingClosed']"):
+                    for selector in ["h3#soldOthersOverLayMsg", "h3#soldCurrentUserOverLayMsg", "h3#notSoldOverLayMsg", "h3.media-banner__subhead"]:
+                        final_bid_elem = container.select_one(selector)
+                        if final_bid_elem:
+                            final_bid_text = final_bid_elem.get_text(strip=True)
+                            if final_bid_text and "N/A" not in final_bid_text:
+                                entry["Final_Bid"] = final_bid_text
+                                log_with_timestamp(f"BS4: Updated final bid for {stock_number} using {selector}: {final_bid_text}")
+                                break
+                    else:
+                        log_with_timestamp(f"BS4: Final bid still N/A for {stock_number}; waiting for next poll.")
+                else:
+                    log_with_timestamp(f"BS4: Bidding Closed indicator not present for {stock_number}; not updating final bid.")
+
+                # Save/update the entry in memory.
+                bs4_data_memory[stock_number] = entry
+
+                # If both essential fields are present then append to DynamoDB.
+                if entry.get("VINDisplay") and entry.get("Final_Bid") != "N/A":
+                    # Prevent duplicate entries.
+                    if stock_number not in written_stock_numbers:
+                        append_to_dynamodb(entry)
+                        written_stock_numbers.add(stock_number)
+                        log_with_timestamp("BS4: Data appended for container: " + json.dumps(entry, indent=2))
+                        # Remove entry once processed.
+                        del bs4_data_memory[stock_number]
+    except Exception as e:
+        log_with_timestamp("BS4: Error processing snapshot: " + str(e))
+
+def monitor_container_bid(driver, container, written_stock_numbers_lock, written_stock_numbers):
+    """
+    Dedicated polling function for a single container.
+    Continuously polls the container until the "Bidding Closed" indicator appears and
+    one of the final bid selectors returns a non-"N/A" value.
+    """
+    try:
+        stock_number_element = container.find_element(By.CLASS_NAME, "stock-number")
+        stock_number_link = stock_number_element.find_element(By.TAG_NAME, "a")
+        stock_number_href = stock_number_link.get_attribute("href")
+        stock_number = stock_number_href.split("/")[-1]
+        with written_stock_numbers_lock:
+            if stock_number in written_stock_numbers:
+                log_with_timestamp(f"Container {stock_number} already processed. Skipping.")
+                return
+        bid_selectors = [
+            "h3#soldOthersOverLayMsg",
+            "h3#soldCurrentUserOverLayMsg",
+            "h3#notSoldOverLayMsg",
+            "h3.media-banner__subhead"
+        ]
+        log_with_timestamp(f"Started polling container: {stock_number}")
+        while True:
+            try:
+                # Check if the bidding closed indicator is present in the container.
+                try:
+                    container.find_element(By.CSS_SELECTOR, "h2.media-banner__heading[data-translate='BiddingClosed']")
+                except NoSuchElementException:
+                    time.sleep(0.01)
+                    continue
+                # If present, iterate over final bid selectors.
+                for selector in bid_selectors:
+                    try:
+                        final_bid_element = container.find_element(By.CSS_SELECTOR, selector)
+                        final_bid_text = final_bid_element.text.strip()
+                        if final_bid_text and "N/A" not in final_bid_text:
+                            timestamp = time.strftime("%Y-%m-%d %H:%M:%S", time.gmtime())
+                            data = {
+                                "timestamp": timestamp,
+                                "stock_number_href": stock_number_href,
+                                "stock_number": stock_number,
+                                "Final_Bid": final_bid_text,
+                            }
+                            append_to_dynamodb(data)
+                            with written_stock_numbers_lock:
+                                written_stock_numbers.add(stock_number)
+                            log_with_timestamp(f"Final bid captured for container {stock_number}: {final_bid_text}")
+                            return
+                    except NoSuchElementException:
+                        continue
+                time.sleep(0.01)
+            except StaleElementReferenceException:
+                log_with_timestamp(f"Stale element encountered while polling container {stock_number}. Exiting thread.")
+                return
+    except Exception as e:
+        log_with_timestamp(f"Error in monitor_container_bid for container {stock_number if 'stock_number' in locals() else ''}: {e}")
+
+def process_new_containers(driver, written_stock_numbers_lock, written_stock_numbers):
+    """
+    Scans the page for auction containers and spawns a dedicated polling thread for each container
+    that is not already monitored.
+    """
+    try:
+        containers = driver.find_elements(By.CSS_SELECTOR, ".AuctionContainer.event__item")
+        for container in containers:
+            try:
+                stock_number_element = container.find_element(By.CLASS_NAME, "stock-number")
+                stock_number_link = stock_number_element.find_element(By.TAG_NAME, "a")
+                stock_number_href = stock_number_link.get_attribute("href")
+                stock_number = stock_number_href.split("/")[-1]
+            except Exception as e:
+                continue
+            with monitored_containers_lock:
+                if stock_number in monitored_containers:
+                    continue
+                monitored_containers.add(stock_number)
+            t = threading.Thread(
+                target=monitor_container_bid,
+                args=(driver, container, written_stock_numbers_lock, written_stock_numbers)
+            )
+            t.daemon = True
+            t.start()
+            log_with_timestamp(f"Started dedicated monitoring for container {stock_number}")
+    except Exception as e:
+        log_with_timestamp("Error in process_new_containers: " + str(e))
+
+def scrape_join_page(join_url, written_stock_numbers_lock, written_stock_numbers):
+    driver = Chrome(options=get_chrome_options())
+    try:
+        login_to_iaai(driver)
+        log_with_timestamp("Navigating to join page: " + join_url)
+        driver.get(join_url)
+        log_with_timestamp("Waiting for the loader to disappear on join page...")
+        wait_for_loader_to_disappear(driver)
+        # Start the background thread for closing ended auctions.
+        close_thread = threading.Thread(target=close_ended_auctions, args=(driver,))
+        close_thread.daemon = True
+        close_thread.start()
+        # Start continuous snapshot processing with BS4 in the background.
+        snapshot_thread = threading.Thread(
+            target=continuous_snapshot, 
+            args=(driver, written_stock_numbers_lock, written_stock_numbers)
+        )
+        snapshot_thread.daemon = True
+        snapshot_thread.start()
+        # Meanwhile, continue ensuring that 12 containers remain on the page
+        # and spawn dedicated container polling threads.
+        while True:
+            try:
+                ensure_12_containers(driver, written_stock_numbers_lock, written_stock_numbers)
+                process_new_containers(driver, written_stock_numbers_lock, written_stock_numbers)
+                time.sleep(5)
+            except Exception as loop_error:
+                log_with_timestamp("Error during ensure_12_containers loop on join page: " + str(loop_error))
+                screenshot_path = os.path.join(OUTPUT_DIR, 'error.png')
+                driver.save_screenshot(screenshot_path)
+                time.sleep(5)
+    except Exception as e:
+        log_with_timestamp("Error in scrape_join_page: " + str(e))
+    finally:
+        try:
+            log_with_timestamp("Closing join page driver for URL: " + join_url)
+            driver.quit()
+        except Exception as close_error:
+            log_with_timestamp("Error closing driver in scrape_join_page: " + str(close_error))
+
+def run_scraper():
+    log_with_timestamp("Starting the IAAI scraper...")
+    # Initialize the initial driver.
+    driver = Chrome(options=get_chrome_options())
+    try:
+        login_to_iaai(driver)
+        log_with_timestamp("Navigating to Live Auctions page...")
+        driver.get("https://www.iaai.com/LiveAuctionsCalendar")
+        WebDriverWait(driver, 20).until(EC.presence_of_element_located((By.TAG_NAME, "body")))
+        # Handle consent banner if present.
+        try:
+            consent_button = WebDriverWait(driver, 10).until(
+                EC.element_to_be_clickable((By.XPATH, "//div[@id='truste-consent-content']//button[text()='Accept']"))
+            )
+            consent_button.click()
+            log_with_timestamp("Consent banner accepted.")
+            WebDriverWait(driver, 10).until(EC.invisibility_of_element((By.ID, "truste-consent-content")))
+        except TimeoutException:
+            log_with_timestamp("No consent banner found. Proceeding.")
+        log_with_timestamp("Locating the first 'Bid Live' button...")
+        first_bid_live_button = WebDriverWait(driver, 20).until(
+            EC.presence_of_element_located((By.XPATH, "//a[@class='btn btn-lg btn-primary btn-block' and .//span[text()='Bid Live']]"))
+        )
+        if first_bid_live_button:
+            href = first_bid_live_button.get_attribute("href")
+            log_with_timestamp(f"'Bid Live' button href: {href}")
+            auction_schedule_id = href.split("AuctionScheduleId=")[1].split("&")[0]
+            log_with_timestamp(f"Extracted AuctionScheduleId: {auction_schedule_id}")
+            parent_div = first_bid_live_button.find_element(By.XPATH, "./ancestor::div[@class='table-cell table-cell--status']")
+            spans_in_parent_div = parent_div.find_elements(By.XPATH, ".//span")
+            span_count = len(spans_in_parent_div)
+            log_with_timestamp(f"Number of spans: {span_count}")
+            event_ids = ",".join([f"{auction_schedule_id}_{i}" for i in range(1, span_count + 1)])
+            new_link = f"https://www.iaai.com/JoinSale?EventId={event_ids}&IsMobile=False&Tenant=US"
+            log_with_timestamp(f"Constructed link: {new_link}")
+            log_with_timestamp("Navigating to the new link...")
+            driver.get(new_link)
+            log_with_timestamp("Navigation complete.")
+            log_with_timestamp("Waiting for the loader to disappear or not exist...")
+            wait_for_loader_to_disappear(driver)
+            log_with_timestamp("Loader is gone or not present.")
+            # Start the background thread for closing ended auctions.
+            close_thread = threading.Thread(target=close_ended_auctions, args=(driver,))
+            close_thread.daemon = True
+            close_thread.start()
+            # Create lock and set for duplicate stock numbers.
+            written_stock_numbers_lock = threading.Lock()
+            written_stock_numbers = set()
+            # ─── NEW: Start continuous snapshot-based processing using BS4 ─────
+            snapshot_thread = threading.Thread(
+                target=continuous_snapshot, 
+                args=(driver, written_stock_numbers_lock, written_stock_numbers)
+            )
+            snapshot_thread.daemon = True
+            snapshot_thread.start()
+            # Meanwhile, keep ensuring that 12 containers remain on the page
+            # and spawn dedicated container monitoring threads.
+            while True:
+                try:
+                    ensure_12_containers(driver, written_stock_numbers_lock, written_stock_numbers)
+                    process_new_containers(driver, written_stock_numbers_lock, written_stock_numbers)
+                    time.sleep(5)
+                except Exception as loop_error:
+                    log_with_timestamp("Error during ensure_12_containers loop execution: " + str(loop_error))
+                    screenshot_path = os.path.join(OUTPUT_DIR, 'error.png')
+                    driver.save_screenshot(screenshot_path)
+                    time.sleep(5)
+        else:
+            log_with_timestamp("No 'Bid Live' button found.")
+    except Exception as e:
+        log_with_timestamp("Error during execution: " + str(e))
+        screenshot_path = os.path.join(OUTPUT_DIR, 'error.png')
+        driver.save_screenshot(screenshot_path)
+    finally:
+        try:
+            log_with_timestamp("Closing browser...")
+            driver.quit()
+        except Exception as close_error:
+            log_with_timestamp("Error while closing the browser: " + str(close_error))
+        display.stop()
+
+if __name__ == "__main__":
+    run_scraper()

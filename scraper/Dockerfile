@@ -1,0 +1,64 @@
+FROM python:3.9-bullseye
+ENV PYTHONUNBUFFERED=1
+
+# Install system dependencies
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    unzip \
+    curl \
+    xvfb \
+    libgconf-2-4 \
+    libxss1 \
+    libnss3 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libgbm1 \
+    libxkbcommon0 \
+    libpango-1.0-0 \
+    libcups2 \
+    libasound2 \
+    libgtk-3-0 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set up working directory
+WORKDIR /app
+
+# Install Chrome
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome-keyring.gpg \
+    && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Get the installed Chrome version
+RUN google-chrome --version | awk '{print $3}' > /tmp/chrome_version.txt
+
+# Install ChromeDriver - using a specific version that's compatible with Chrome
+RUN wget -q "https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.35/linux64/chromedriver-linux64.zip" \
+    && unzip chromedriver-linux64.zip \
+    && rm chromedriver-linux64.zip \
+    && chmod +x chromedriver-linux64/chromedriver \
+    && mv chromedriver-linux64/chromedriver /usr/local/bin/
+
+
+
+# Copy requirements file and install Python dependencies
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install beautifulsoup4
+
+
+
+RUN pip install boto3
+
+# Copy the script
+COPY iaai_scraper.py .
+
+# Create a volume for persisting the result.json
+VOLUME ["/app/data"]
+
+# Entry command
+CMD ["python", "iaai_scraper.py"]

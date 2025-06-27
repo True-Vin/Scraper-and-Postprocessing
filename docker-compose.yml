@@ -1,0 +1,83 @@
+version: "3.8"
+
+services:
+  iaai-scraper-1:
+    build: ./scraper
+    container_name: iaai-scraper-1
+    environment:
+      IAAI_EMAIL: khana@hawkmail.hfcc.edu
+      IAAI_PASSWORD: karam2002
+      OUTPUT_DIR: /snap             # → script writes under /snap/snapshots
+      AWS_ACCESS_KEY_ID: AKIA556NVQPXHQM3S3HJ
+      AWS_SECRET_ACCESS_KEY: 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
+      AWS_REGION: us-east-1
+      DISPLAY: :99
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - /mnt/iaai-snapshots:/snap   # host EBS mount → container /snap
+    ports:
+      - "5001:5001"                 # only expose for the first instance
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  iaai-scraper-2:
+    build: ./scraper
+    container_name: iaai-scraper-2
+    environment:
+      IAAI_EMAIL: khana@hawkmail.hfcc.edu
+      IAAI_PASSWORD: karam2002
+      OUTPUT_DIR: /snap
+      AWS_ACCESS_KEY_ID: AKIA556NVQPXHQM3S3HJ
+      AWS_SECRET_ACCESS_KEY: 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
+      AWS_REGION: us-east-1
+      DISPLAY: :99
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - /mnt/iaai-snapshots:/snap
+    command: sh -c "sleep 60 && exec python iaai_scraper.py"
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  iaai-scraper-3:
+    build: ./scraper
+    container_name: iaai-scraper-3
+    environment:
+      IAAI_EMAIL: khana@hawkmail.hfcc.edu
+      IAAI_PASSWORD: karam2002
+      OUTPUT_DIR: /snap
+      AWS_ACCESS_KEY_ID: AKIA556NVQPXHQM3S3HJ
+      AWS_SECRET_ACCESS_KEY: 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
+      AWS_REGION: us-east-1
+      DISPLAY: :99
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - /mnt/iaai-snapshots:/snap
+    command: sh -c "sleep 120 && exec python iaai_scraper.py"
+    restart: unless-stopped
+    networks:
+      - app_network
+
+  iaai-scraper-4:
+    build: ./scraper
+    container_name: iaai-scraper-4
+    environment:
+      IAAI_EMAIL: khana@hawkmail.hfcc.edu
+      IAAI_PASSWORD: karam2002
+      OUTPUT_DIR: /snap
+      AWS_ACCESS_KEY_ID: AKIA556NVQPXHQM3S3HJ
+      AWS_SECRET_ACCESS_KEY: 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
+      AWS_REGION: us-east-1
+      DISPLAY: :99
+      PYTHONUNBUFFERED: 1
+    volumes:
+      - /mnt/iaai-snapshots:/snap
+    command: sh -c "sleep 180 && exec python iaai_scraper.py"
+    restart: unless-stopped
+    networks:
+      - app_network
+
+networks:
+  app_network:
+    driver: bridge

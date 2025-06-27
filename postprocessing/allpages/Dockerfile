@@ -1,0 +1,78 @@
+FROM python:3.9-bullseye
+
+# Set environment variables
+ENV PYTHONUNBUFFERED=1
+ENV PYTHONDONTWRITEBYTECODE=1
+
+# ------------------------------------------------
+# Install system dependencies
+# ------------------------------------------------
+RUN apt-get update && apt-get install -y \
+    wget \
+    gnupg \
+    unzip \
+    curl \
+    xvfb \
+    libgconf-2-4 \
+    libxss1 \
+    libnss3 \
+    libatk1.0-0 \
+    libatk-bridge2.0-0 \
+    libgbm1 \
+    libxkbcommon0 \
+    libpango-1.0-0 \
+    libcups2 \
+    libasound2 \
+    libgtk-3-0 \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# Set up working directory
+WORKDIR /app
+
+# ------------------------------------------------
+# Install Google Chrome
+# ------------------------------------------------
+RUN wget -q -O - https://dl-ssl.google.com/linux/linux_signing_key.pub | gpg --dearmor -o /usr/share/keyrings/google-chrome-keyring.gpg \
+    && echo "deb [arch=amd64 signed-by=/usr/share/keyrings/google-chrome-keyring.gpg] http://dl.google.com/linux/chrome/deb/ stable main" >> /etc/apt/sources.list.d/google.list \
+    && apt-get update \
+    && apt-get install -y google-chrome-stable \
+    && apt-get clean \
+    && rm -rf /var/lib/apt/lists/*
+
+# ------------------------------------------------
+# Install ChromeDriver (pinned to a compatible version)
+# ------------------------------------------------
+RUN wget -q "https://storage.googleapis.com/chrome-for-testing-public/134.0.6998.35/linux64/chromedriver-linux64.zip" \
+    && unzip chromedriver-linux64.zip \
+    && rm chromedriver-linux64.zip \
+    && chmod +x chromedriver-linux64/chromedriver \
+    && mv chromedriver-linux64/chromedriver /usr/local/bin/
+
+# ------------------------------------------------
+# Copy requirements & install Python dependencies
+# ------------------------------------------------
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+RUN pip install beautifulsoup4 boto3
+
+# ------------------------------------------------
+# Copy your getdata.py code
+# ------------------------------------------------
+COPY getdata.py .
+
+# ------------------------------------------------
+# Create /app/data volume for persistent storage
+# ------------------------------------------------
+VOLUME ["/app/data"]
+
+# ------------------------------------------------
+# Health check
+# ------------------------------------------------
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD python -c "import boto3; print('Health check passed')" || exit 1
+
+# ------------------------------------------------
+# Entry command
+# ------------------------------------------------
+CMD ["python", "getdata.py"]

@@ -1,0 +1,4 @@
+undetected-chromedriver==3.5.5
+selenium==4.16.0
+pyvirtualdisplay==3.0
+
